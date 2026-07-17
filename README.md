@@ -28,10 +28,10 @@
   - Produto Mínimo Viável
   - Testes A/B
 
-[Ética na Engenharia de Software (03/03/2026 - 05/03/2026)](etica.md)
-  - Código de ética na engenharia de software
-  - Responsabilidades do engenheiro de software
-  - Estudos de Casos 
+[Análise e Projeto de Software (I) (27/08/2026 - 29/09/2026)](aps .md)
+  - UML
+  - Princípios de Projeto (I)
+  - Acoplamento e Coesão
   
 [Processo de Software I (10/03/2026 - 12/03/2026)](processos.md)
   - Modelos de processos de Software (Cascata e Incremental) (12/03)
