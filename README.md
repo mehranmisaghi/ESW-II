@@ -23,7 +23,7 @@
 [Aula Inaugural (04/98/2026 - 04/08/2026)](intro.md)
   - Ementa, metodologia, formas de avaliação
   
-[C  onceitos básicos (04/08/2026 - 25/08/2026)](intro.md)
+[Conceitos básicos (04/08/2026 - 25/08/2026)](intro.md)
   - Casos de Uso
   - Produto Mínimo Viável
   - Testes A/B
