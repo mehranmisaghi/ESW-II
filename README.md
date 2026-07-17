@@ -43,29 +43,17 @@
   - Testes
   - Refatoração
 
-## Prova I (31/03/2026)
 
-[Métodos Ágeis no Desenvolvimento de Software  (02/04/2026 - 30/04/2026)](ageis.md)
-  - [Surgimento de métodos ágeis](ageis.md)
-  - **Apresentação de Manifesto Ágil (07/04)**
-  - [manifesto ágil 07/04](ageis.md)
-  - [Extreme Programming (XP) 07/04](ageis.md)
-  - [Scrum 09/04](ageis.md)
-  - [Kanban](ageis.mdmd)
-  - Trello
- 
-[Engenharia de Requisitos (05/05/2026 - 21/05/2026)](requisitos.md)
+[Aplicações da Engenharia de Software (10/11/2026 - 10/11/2026)](aps.md)
+  - Aplicações
+  - Engenharia de Software voltado para Negócio
 
-[Um pouco sobre DevOps](devops.md)
+## Prova II (12/11/2026)
+
+[Seminários (17/11/2026 - 10/12/2026)](seminarios.md)
+  - Definição e detalhamento de temas
+  - Preparação de seminários
+  - Apresentação de seminários
+
+## Visita 
   
-## Prova II (02/06/2026 - Data nova)
-
-[Detalhamento de Seminários (28/05/2026 - 28/05/2026)](seminarios/seminarios.md)
-
-[Preparação dos Seminários (02/06/2026 - 16/06/2026)](seminarios/seminarios.md)
-
-## Visita TOTVS confirmado (23/06/2026)
-  
-[Apresentação de seminários (18/06/2026 - 30/06/2026)](seminarios/seminarios.md)
----
-![visitantes](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/esw.visitor-badge&left_text=Visitantes&format=true&logo=github)
