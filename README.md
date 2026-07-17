@@ -1,11 +1,12 @@
-# SID0279 - Engenharia de Software I [2026/1]
+# SID0232 - Engenharia de Software II [2026/2]
 
-## Horário: 	3M23 5M45 (23/02/2026 - 03/07/2026) 
+## Horário: 	35M45 (04/08/2026 - 10/12/2026) 
 
-Repositório destinado para disciplina de Engenharia de Software I
+>Repositório destinado para disciplina de Engenharia de Software II
 
 ## Ementa da Disciplina
-Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvimento de software. Manutenção de software. Metodologias, técnicas e ferramentas na engenharia de software. 
+
+ Requisitos de software. Processo de engenharia de requisitos. Análise e projeto de software. Verificação e validação de software. Testes de software, suas categorias e níveis. Aplicações da engenharia de software. 
 
 ## Metodologia
 - Aulas expositiva dialogadas
@@ -19,12 +20,13 @@ Fundamentos da engenharia de software. Ciclo de vida e paradigmas de desenvolvim
 - Seminários com peso 3.
 
 ## Cronograma Sugerido
-[Aula Inaugural (24/02/2026 - 24/02/2026)](intro.md)
+[Aula Inaugural (04/98/2026 - 04/08/2026)](intro.md)
   - Ementa, metodologia, formas de avaliação
   
-[Conceitos Básicos (26/02/2026 - 26/02/2026)](intro.md)
-  - Conceitos Básicos
-  - Principais áreas de atuação
+[C  onceitos básicos (04/08/2026 - 25/08/2026)](intro.md)
+  - Casos de Uso
+  - Produto Mínimo Viável
+  - Testes A/B
 
 [Ética na Engenharia de Software (03/03/2026 - 05/03/2026)](etica.md)
   - Código de ética na engenharia de software
