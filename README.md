@@ -28,21 +28,20 @@
   - Produto Mínimo Viável
   - Testes A/B
 
-[Análise e Projeto de Software (I) (27/08/2026 - 29/09/2026)](aps .md)
+[Análise e Projeto de Software (I) (27/08/2026 - 29/09/2026)](aps1.md)
   - UML
   - Princípios de Projeto (I)
   - Acoplamento e Coesão
-  
-[Processo de Software I (10/03/2026 - 12/03/2026)](processos.md)
-  - Modelos de processos de Software (Cascata e Incremental) (12/03)
-  - Prototipação (17/03)
 
-[Processo de Software II (17/03/2026 - 26/03/2026)](processos.md)
-  - Rapid Appliction Development (RAD) (17/03)
-  - Rational Unify Process (RUP) (ainda não foi visto)
-  - Tecnologia em camadas (ainda não foi visto)
-  - **Preparação das apresentações (19/03)**
-  - **Apresentação dos modelos (dia 24/03)**
+## Prova I (01/10/2026)
+
+[Análise e Projeto de Software (II) (06/10/2026 - 15/10/2026)](aps2.md)
+  - Princípios do Projeto (II)
+  - Arquitetura de Software
+
+[Verificação, validação e testes de software. (20/10/2026 - 05/11/2026)](vvt.md)
+  - Testes
+  - Refatoração
 
 ## Prova I (31/03/2026)
 
