@@ -55,5 +55,5 @@
   - Preparação de seminários
   - Apresentação de seminários
 
-## Visita 
+## Visita (a definir)
   
