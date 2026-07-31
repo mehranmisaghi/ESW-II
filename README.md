@@ -56,4 +56,7 @@
   - Apresentação de seminários
 
 ## Visita (a definir)
-  
+ 
+---
+![v](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi.visitor-badge&left_text=Visitantes&format=true&logo=github)
+ 
