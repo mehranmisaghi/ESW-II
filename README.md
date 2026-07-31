@@ -20,7 +20,7 @@
 - Seminários com peso 3.
 
 ## Cronograma Sugerido  
-[Aula Inaugural (04/98/2026 - 04/08/2026)](intro.md)
+[Aula Inaugural (04/08/2026 - 04/08/2026)](intro.md)
   - Ementa, metodologia, material utilizado e formas de avaliação
   
 [Conceitos básicos (04/08/2026 - 25/08/2026)](intro.md)
