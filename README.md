@@ -19,7 +19,7 @@
 - Duas Provas com peso 2,5 cada prova
 - Seminários com peso 3.
 
-## Cronograma Sugerido
+## Cronograma Sugerido  
 [Aula Inaugural (04/98/2026 - 04/08/2026)](intro.md)
   - Ementa, metodologia, material utilizado e formas de avaliação
   
