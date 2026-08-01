@@ -24,7 +24,7 @@
   - Ementa, metodologia, material utilizado e formas de avaliação
   
 [Conceitos básicos (04/08/2026 - 25/08/2026)](intro.md)
-  - Casos de Uso
+  - [Casos de Uso](casos-de-uso.md)
   - Produto Mínimo Viável
   - Testes A/B
 
