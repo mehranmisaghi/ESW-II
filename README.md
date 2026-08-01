@@ -9,13 +9,13 @@
 1. [Ementa da Disciplina](#ementa-da-disciplina)
 2. [Metodologia](#Metodologia)
 3. [Avaliação](#avaliação)
-4. [Cronograma Sugerido](#crongorama-sugerido)
-5. [Prova I](#prova-I)
-6. [Análise e Projeto de Software II](#analiseprojetoii)
-7. [Verificação, validação e testes de software](#veriicacao)
-8. [Aplicações da Engenharia de Software](#aplicacoes)
-9. [Prova II](#provaii)
-10. [Seminários](#seminarios)
+4. [Cronograma Sugerido](#cronograma-sugerido)
+5. [Prova I](#prova-i)
+6. [Análise e Projeto de Software II](#análise-e-projeto-de-software-ii)
+7. [Verificação, validação e testes de software](#veriicação-,-validação-e-testes-de-software)
+8. [Aplicações da Engenharia de Software](#aplicações-da-engenharia-de-software)
+9. [Prova II](#prova-ii)
+10. [Seminários](#seminários)
 
 
 ## Ementa da Disciplina
