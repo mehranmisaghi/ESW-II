@@ -6,11 +6,11 @@
 
 ## Sumário
 
-1. [Ementa da Disciplina](#ementa)
+1. [Ementa da Disciplina](#ementa-da-disciplina)
 2. [Metodologia](#Metodologia)
-3. [Avaliação](#avaliacao)
-4. [Cronograma Sugerido](#crongorama)
-5. [Prova I](#provaI)
+3. [Avaliação](#avaliação)
+4. [Cronograma Sugerido](#crongorama-sugerido)
+5. [Prova I](#prova-I)
 6. [Análise e Projeto de Software II](#analiseprojetoii)
 7. [Verificação, validação e testes de software](#veriicacao)
 8. [Aplicações da Engenharia de Software](#aplicacoes)
