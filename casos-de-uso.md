@@ -587,12 +587,12 @@ Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Softwar
 
 ## Referências utilizadas
 
+- LARMAN, Craig. **Applying UML and Patterns**. Pearson, 2004.
 - PRESSMAN, Roger S.; MAXIM, Bruce R. **Engenharia de Software: Uma Abordagem Profissional**. 9ª ed. McGraw Hill / Bookman, 2021.
 - SOMMERVILLE, Ian. **Engenharia de Software**. 10ª ed. Pearson, 2019.
 - VALENTE, Marco Tulio. **Engenharia de Software Moderna: Princípios e práticas para desenvolvimento de software com produtividade**. 2023.
 - VALENTE, Marco Tulio. **Fundamentos de Manutenção de Software**. 2026.
 - YOUREE, Roger K. **Software Reliability Techniques for Real-World Applications**. Wiley, 2023.
-- LARMAN, Craig. **Applying UML and Patterns**. Pearson, 2004.
 
 ---
 
