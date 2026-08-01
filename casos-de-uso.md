@@ -603,3 +603,8 @@ Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Softwar
 
 ## Teste os seus conhecimentos
  - [Casos de Uso](https://mehranmisaghi.github.io/ESW-II/materiais/qcasos.html)
+
+ ---
+  ## [Voltar](https://github.com/mehranmisaghi/ESW-II/tree/main)
+
+ ![v](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-II/casos.visitor-badge&left_text=Visitantes&format=true&logo=github)
