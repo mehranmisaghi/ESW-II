@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — Casos de Uso </title>
+<style>
+  :root{
+    --bg:#0f1420;
+    --card:#161d2e;
+    --accent:#5b8cff;
+    --accent2:#7c5cff;
+    --good:#2ecc71;
+    --bad:#ff5c5c;
+    --text:#e8ecf6;
+    --muted:#9aa4bd;
+    --border:#26304a;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background:linear-gradient(160deg,#0f1420 0%,#161327 100%);
+    color:var(--text);
+    padding:24px 12px 60px;
+  }
+  .wrap{max-width:820px;margin:0 auto;}
+  header{
+    text-align:center;
+    margin-bottom:28px;
+  }
+  header h1{
+    font-size:1.9rem;
+    margin:0 0 6px;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  header p{color:var(--muted);margin:4px 0;}
+
+  #progress-wrap{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:14px 18px;
+    margin-bottom:22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    position:sticky;
+    top:10px;
+    z-index:10;
+    backdrop-filter: blur(6px);
+  }
+  #bar-bg{
+    flex:1;
+    height:10px;
+    background:#0d1220;
+    border-radius:6px;
+    overflow:hidden;
+    border:1px solid var(--border);
+  }
+  #bar-fill{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    transition:width .3s ease;
+  }
+  #progress-text{font-size:.85rem;color:var(--muted);white-space:nowrap;}
+
+  .question{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px 22px;
+    margin-bottom:16px;
+  }
+  .q-header{
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+    margin-bottom:12px;
+  }
+  .q-num{
+    font-weight:700;
+    color:var(--accent);
+    font-size:.95rem;
+    white-space:nowrap;
+  }
+  .q-text{font-size:1.02rem;line-height:1.5;}
+
+  .options{display:flex;flex-direction:column;gap:8px;}
+  .option{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    padding:10px 12px;
+    border:1px solid var(--border);
+    border-radius:10px;
+    cursor:pointer;
+    transition:background .15s, border-color .15s;
+    font-size:.95rem;
+    line-height:1.4;
+  }
+  .option:hover{background:#1c2438;}
+  .option input{margin-top:3px;accent-color:var(--accent);}
+  .option.correct{
+    border-color:var(--good);
+    background:rgba(46,204,113,.12);
+  }
+  .option.incorrect{
+    border-color:var(--bad);
+    background:rgba(255,92,92,.12);
+  }
+  .option.disabled{cursor:default;}
+
+  .feedback{
+    margin-top:10px;
+    font-size:.88rem;
+    padding:8px 10px;
+    border-radius:8px;
+    display:none;
+  }
+  .feedback.show{display:block;}
+  .feedback.ok{background:rgba(46,204,113,.12);color:var(--good);}
+  .feedback.no{background:rgba(255,92,92,.12);color:var(--bad);}
+
+  #submit-area{
+    text-align:center;
+    margin-top:28px;
+  }
+  button#submit-btn{
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    color:#fff;
+    border:none;
+    padding:14px 34px;
+    font-size:1.05rem;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    box-shadow:0 6px 18px rgba(91,140,255,.35);
+  }
+  button#submit-btn:hover{filter:brightness(1.08);}
+  button#submit-btn:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+    box-shadow:none;
+  }
+
+  #result{
+    display:none;
+    text-align:center;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:30px 20px;
+    margin-top:24px;
+  }
+  #result.show{display:block;}
+  #result h2{margin-top:0;font-size:1.6rem;}
+  #result .score{
+    font-size:2.6rem;
+    font-weight:800;
+    background:linear-gradient(90deg,var(--accent),var(--accent2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    margin:10px 0;
+  }
+  #result p{color:var(--muted);}
+  #reset-btn{
+    margin-top:14px;
+    background:transparent;
+    border:1px solid var(--border);
+    color:var(--text);
+    padding:10px 22px;
+    border-radius:24px;
+    cursor:pointer;
+  }
+  #reset-btn:hover{background:#1c2438;}
+
+  .unanswered-note{
+    color:var(--bad);
+    text-align:center;
+    font-size:.9rem;
+    margin-top:10px;
+    display:none;
+  }
+  .unanswered-note.show{display:block;}
+
+  footer{
+    text-align:center;
+    color:var(--muted);
+    font-size:.8rem;
+    margin-top:40px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Quiz — Casos de Uso</h1>
+    <p>Engenharia de Software II · Requisitos e Modelagem de Casos de Uso</p>
+    </header>
+
+  <div id="progress-wrap">
+    <div id="progress-text">0 / 30 respondidas</div>
+    <div id="bar-bg"><div id="bar-fill"></div></div>
+  </div>
+
+  <div id="quiz-container"></div>
+
+  <p class="unanswered-note" id="unanswered-note">⚠️ Responda todas as questões antes de corrigir.</p>
+
+  <div id="submit-area">
+    <button id="submit-btn">Corrigir Quiz</button>
+  </div>
+
+  <div id="result">
+    <h2>Resultado</h2>
+    <div class="score" id="score-text"></div>
+    <p id="score-msg"></p>
+    <button id="reset-btn">Refazer Quiz</button>
+  </div>
+
+  <footer>Material baseado na disciplina de Engenharia de Software II — Casos de Uso</footer>
+</div>
+
+<script>
+const questions = [
+  {
+    q: "O que o modelo de casos de uso representa em um sistema de software?",
+    options: [
+      "A arquitetura interna de classes do sistema",
+      "Os requisitos funcionais do sistema, sob a perspectiva de interações com elementos externos",
+      "O cronograma de desenvolvimento do projeto",
+      "O código-fonte já implementado das funcionalidades",
+      "Os requisitos não funcionais de desempenho"
+    ],
+    correct: 1
+  },
+  {
+    q: "Qual é o outro nome dado ao diagrama de casos de uso, por oferecer uma visão global e de alto nível do sistema?",
+    options: [
+      "Diagrama de classes",
+      "Diagrama de sequência",
+      "Diagrama de contexto",
+      "Diagrama de componentes",
+      "Diagrama de implantação"
+    ],
+    correct: 2
+  },
+  {
+    q: "Para a equipe de desenvolvedores, os casos de uso servem, entre outras coisas, como ponto de partida para:",
+    options: [
+      "Definir o orçamento do projeto",
+      "Refinar requisitos de software",
+      "Escolher a linguagem de programação",
+      "Contratar novos desenvolvedores",
+      "Definir o layout visual da interface"
+    ],
+    correct: 1
+  },
+  {
+    q: "Segundo o material, quem pode usar os casos de uso como base para a criação de casos de teste?",
+    options: [
+      "Os testadores",
+      "O cliente final",
+      "O gerente de projetos",
+      "O designer gráfico",
+      "O administrador de banco de dados"
+    ],
+    correct: 0
+  },
+  {
+    q: "Um caso de uso deve descrever uma interação que:",
+    options: [
+      "Pode ser interrompida a qualquer momento sem gerar um estado completo",
+      "Deve ter significado apenas para o desenvolvedor",
+      "Deve ter significado para o usuário final e terminar em um estado completo",
+      "Nunca pode retornar ao estado inicial",
+      "Deve durar exatamente uma sessão de uso do sistema"
+    ],
+    correct: 2
+  },
+  {
+    q: "O modelo de casos de uso de um sistema é composto por quais duas partes?",
+    options: [
+      "Textual e gráfica",
+      "Física e lógica",
+      "Estática e dinâmica",
+      "Funcional e não funcional",
+      "Interna e externa"
+    ],
+    correct: 0
+  },
+  {
+    q: "De acordo com o material, um caso de uso define parte da funcionalidade de um sistema:",
+    options: [
+      "Revelando toda a estrutura interna do banco de dados",
+      "Sem revelar a estrutura e o comportamento internos do sistema",
+      "Detalhando o código-fonte da implementação",
+      "Apenas para sistemas orientados a objetos",
+      "Somente através de diagramas de classes"
+    ],
+    correct: 1
+  },
+  {
+    q: "No formato de enumeração de um caso de uso, os passos são organizados como:",
+    options: [
+      "Um parágrafo narrativo único",
+      "Uma lista numerada de ações sequenciais entre ator e sistema",
+      "Uma tabela de requisitos não funcionais",
+      "Um diagrama de classes anotado",
+      "Um conjunto de testes automatizados"
+    ],
+    correct: 1
+  },
+  {
+    q: "O que caracteriza um 'ator' em um caso de uso?",
+    options: [
+      "Um componente interno do sistema responsável pela lógica de negócio",
+      "Um elemento externo ao sistema que interage com ele",
+      "Uma tabela do banco de dados",
+      "Um requisito não funcional do sistema",
+      "Um módulo de testes automatizados"
+    ],
+    correct: 1
+  },
+  {
+    q: "Segundo as categorias apresentadas, um 'Sistema de Cobrança' que interage com o sistema principal seria classificado como qual tipo de ator?",
+    options: [
+      "Cargo",
+      "Organização",
+      "Outro sistema",
+      "Equipamento",
+      "Usuário anônimo"
+    ],
+    correct: 2
+  },
+  {
+    q: "Sobre o 'papel do ator', o material afirma que o nome dado a um ator deve:",
+    options: [
+      "Lembrar quem especificamente o representa (ex: nome da pessoa)",
+      "Lembrar o seu papel em relação ao sistema, e não quem o representa",
+      "Ser sempre um número de identificação",
+      "Ser idêntico ao nome do caso de uso",
+      "Corresponder ao cargo hierárquico mais alto da empresa"
+    ],
+    correct: 1
+  },
+  {
+    q: "O que é um 'cenário' em um caso de uso?",
+    options: [
+      "O nome técnico dado ao ator principal",
+      "O fluxo, ou seja, o caminho trilhado pelo ator",
+      "A lista de requisitos não funcionais do sistema",
+      "O conjunto de testes unitários do sistema",
+      "A documentação de arquitetura do sistema"
+    ],
+    correct: 1
+  },
+  {
+    q: "Qual das opções abaixo melhor define o 'Cenário Básico' (Fluxo Normal)?",
+    options: [
+      "Qualquer caminho que leva a uma situação de erro",
+      "Um caminho alternativo que não foi escolhido como principal",
+      "A sequência de passos mais usual, na qual a funcionalidade é alcançada com sucesso",
+      "Um caminho exclusivo para testes automatizados",
+      "A documentação técnica da API do sistema"
+    ],
+    correct: 2
+  },
+  {
+    q: "O 'Cenário de Exceção' é caracterizado por:",
+    options: [
+      "Ser sempre o caminho mais utilizado pelos usuários",
+      "Levar a uma situação de erro, não permitindo que a funcionalidade seja alcançada com sucesso",
+      "Ser um sinônimo de cenário básico",
+      "Representar apenas melhorias de performance",
+      "Nunca fazer parte da especificação do caso de uso"
+    ],
+    correct: 1
+  },
+  {
+    q: "Ao escrever cenários, o material recomenda utilizar:",
+    options: [
+      "Voz passiva, para dar ênfase ao sistema",
+      "Voz ativa, explicitando quem realiza a ação",
+      "Apenas verbos no gerúndio",
+      "Códigos de erro numéricos no lugar de texto",
+      "Termos técnicos de banco de dados"
+    ],
+    correct: 1
+  },
+  {
+    q: "Segundo o material, ao escrever os passos de um cenário, deve-se evitar:",
+    options: [
+      "Explicitar quem realiza a tarefa",
+      "Usar voz ativa",
+      "Detalhes específicos de interface, como 'apertar o botão Ok'",
+      "Descrever a pré-condição do cenário",
+      "Numerar os passos do fluxo"
+    ],
+    correct: 2
+  },
+  {
+    q: "Qual é a forma padrão sugerida para nomear um caso de uso?",
+    options: [
+      "CU-<descrição>.<NNN>",
+      "UC<NNN> - <descrição>",
+      "<descrição>-UC<NNN>",
+      "CASO_USO_<NNN>",
+      "UC.<descrição>.<NNN>"
+    ],
+    correct: 1
+  },
+  {
+    q: "No padrão de nomenclatura de casos de uso, a <descrição> deve iniciar com:",
+    options: [
+      "Um substantivo",
+      "Um verbo no infinitivo",
+      "Um adjetivo",
+      "Um número sequencial",
+      "O nome do ator principal"
+    ],
+    correct: 1
+  },
+  {
+    q: "Uma pré-condição deve ser avaliada:",
+    options: [
+      "Depois de executar qualquer ação do caso de uso",
+      "Durante a execução do último passo do caso de uso",
+      "Antes de executar qualquer ação do caso de uso",
+      "Somente em cenários de exceção",
+      "Apenas quando o sistema apresenta erro"
+    ],
+    correct: 2
+  },
+  {
+    q: "Segundo o material, se você precisa de alguma informação do próprio caso de uso para avaliar uma condição, então ela é:",
+    options: [
+      "Uma pré-condição válida",
+      "Uma pós-condição obrigatória",
+      "Uma regra de negócio, e não uma pré-condição",
+      "Um requisito não funcional",
+      "Um ator secundário"
+    ],
+    correct: 2
+  },
+  {
+    q: "Qual das opções abaixo é um exemplo INADEQUADO de pré-condição, segundo o material?",
+    options: [
+      "Os documentos fiscais do ano atual foram gerados",
+      "Há um ou mais arquivos de banco importados no sistema",
+      "O usuário selecionou a opção 'Cadastrar Empreendimento' no menu principal",
+      "Há um ou mais processos com a situação 'aguardando avaliação'",
+      "Existem informações que precisam estar disponíveis antes da execução"
+    ],
+    correct: 2
+  },
+  {
+    q: "As pós-condições descrevem:",
+    options: [
+      "O estado do sistema antes da execução do caso de uso",
+      "O estado do sistema após a conclusão do caso de uso",
+      "Apenas os requisitos de hardware necessários",
+      "A lista de atores envolvidos no sistema",
+      "O cronograma de entrega do projeto"
+    ],
+    correct: 1
+  },
+  {
+    q: "As pós-condições devem ser descritas:",
+    options: [
+      "Apenas uma vez, para todo o caso de uso",
+      "Somente no cenário de exceção",
+      "Para cada cenário pertinente que realmente possua uma pós-condição",
+      "Nunca, pois são opcionais em qualquer situação",
+      "Apenas quando o sistema falha"
+    ],
+    correct: 2
+  },
+  {
+    q: "Para identificar atores de um sistema, uma pergunta relevante sugerida no material é:",
+    options: [
+      "Qual é o custo do servidor de produção?",
+      "Quem são os usuários do sistema proposto?",
+      "Qual framework será utilizado na implementação?",
+      "Qual é a paleta de cores da interface?",
+      "Quantas linhas de código o sistema terá?"
+    ],
+    correct: 1
+  },
+  {
+    q: "Para encontrar casos de uso, uma das perguntas sugeridas é: 'O ator precisa criar, armazenar, alterar, remover ou consultar...'",
+    options: [
+      "...um novo funcionário na empresa?",
+      "...alguma informação no sistema?",
+      "...o código-fonte do sistema?",
+      "...um novo servidor de banco de dados?",
+      "...a arquitetura de microsserviços?"
+    ],
+    correct: 1
+  },
+  {
+    q: "No exemplo 'Efetuar Pedido de Pizza', o que ocorre no cenário alternativo quando o sabor informado é inválido ou indisponível?",
+    options: [
+      "O sistema cancela definitivamente o cadastro do cliente",
+      "O sistema apresenta mensagem de sabor indisponível e solicita novo sabor, retornando ao fluxo principal",
+      "O sistema gera a cobrança normalmente e ignora o erro",
+      "O pedido é automaticamente enviado para fabricação",
+      "O sistema encerra a aplicação"
+    ],
+    correct: 1
+  },
+  {
+    q: "No exemplo 'Transferir Valores entre Contas', qual é o primeiro passo do fluxo normal?",
+    options: [
+      "Cliente informa o valor a transferir",
+      "Sistema efetua a transferência",
+      "Autenticar Cliente",
+      "Cliente informa a data da operação",
+      "Sistema pergunta se deseja nova transferência"
+    ],
+    correct: 2
+  },
+  {
+    q: "No exemplo do PDV (Venda em Caixa de Supermercado) de Larman, o que o sistema faz após identificar cada produto (passos 3-4)?",
+    options: [
+      "Encerra a venda automaticamente",
+      "Registra a venda, apresenta descrição, preço e total da compra até o momento",
+      "Solicita imediatamente o pagamento",
+      "Gera o recibo antes de continuar",
+      "Envia o pedido para o sistema de RH"
+    ],
+    correct: 1
+  },
+  {
+    q: "No fluxo alternativo de pagamento com cartão de crédito do exemplo PDV, o que ocorre se houver erro de comunicação com a operadora (passo 4a)?",
+    options: [
+      "O sistema conclui a venda mesmo assim",
+      "O sistema sinaliza erro ao Caixa, que solicita ao cliente um modo alternativo de pagamento",
+      "O sistema exclui o cliente do cadastro",
+      "O sistema reinicia toda a venda do zero sem aviso",
+      "O sistema ignora o erro e aguarda indefinidamente"
+    ],
+    correct: 1
+  },
+  {
+    q: "No exercício de 'Transferência via PIX', qual extensão trata do caso de horário noturno com valor acima de R$ 1000?",
+    options: [
+      "O sistema bloqueia permanentemente a conta do cliente",
+      "O sistema informa que o PIX não é possível e sugere agendamento para as 08:00 do dia seguinte",
+      "O sistema realiza a transferência sem qualquer restrição",
+      "O sistema exige a presença física do cliente em uma agência",
+      "O sistema cancela automaticamente a chave PIX cadastrada"
+    ],
+    correct: 1
+  }
+];
+
+const container = document.getElementById('quiz-container');
+const submitBtn = document.getElementById('submit-btn');
+const resultDiv = document.getElementById('result');
+const scoreText = document.getElementById('score-text');
+const scoreMsg = document.getElementById('score-msg');
+const resetBtn = document.getElementById('reset-btn');
+const progressText = document.getElementById('progress-text');
+const barFill = document.getElementById('bar-fill');
+const unansweredNote = document.getElementById('unanswered-note');
+
+let answered = new Array(questions.length).fill(null);
+
+function shuffle(arr){
+  // Fisher-Yates, mas mantemos referência ao índice correto
+  const withIndex = arr.map((val, i) => ({val, isCorrect: i === arr._correct}));
+  for(let i = withIndex.length - 1; i > 0; i--){
+    const j = Math.floor(Math.random() * (i+1));
+    [withIndex[i], withIndex[j]] = [withIndex[j], withIndex[i]];
+  }
+  return withIndex;
+}
+
+function render(){
+  container.innerHTML = '';
+  questions.forEach((item, qIndex) => {
+    const qDiv = document.createElement('div');
+    qDiv.className = 'question';
+    qDiv.id = 'q-' + qIndex;
+
+    const header = document.createElement('div');
+    header.className = 'q-header';
+    header.innerHTML = `<span class="q-num">Q${qIndex+1}.</span><span class="q-text">${item.q}</span>`;
+    qDiv.appendChild(header);
+
+    const optsDiv = document.createElement('div');
+    optsDiv.className = 'options';
+
+    item.options.forEach((optText, optIndex) => {
+      const optLabel = document.createElement('label');
+      optLabel.className = 'option';
+      optLabel.dataset.index = optIndex;
+
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'q' + qIndex;
+      input.value = optIndex;
+      input.addEventListener('change', () => {
+        answered[qIndex] = optIndex;
+        updateProgress();
+      });
+
+      optLabel.appendChild(input);
+      const span = document.createElement('span');
+      span.textContent = optText;
+      optLabel.appendChild(span);
+      optsDiv.appendChild(optLabel);
+    });
+
+    qDiv.appendChild(optsDiv);
+
+    const feedback = document.createElement('div');
+    feedback.className = 'feedback';
+    feedback.id = 'fb-' + qIndex;
+    qDiv.appendChild(feedback);
+
+    container.appendChild(qDiv);
+  });
+}
+
+function updateProgress(){
+  const count = answered.filter(a => a !== null).length;
+  progressText.textContent = `${count} / ${questions.length} respondidas`;
+  barFill.style.width = (count / questions.length * 100) + '%';
+}
+
+function correct(){
+  let score = 0;
+  questions.forEach((item, qIndex) => {
+    const qDiv = document.getElementById('q-' + qIndex);
+    const options = qDiv.querySelectorAll('.option');
+    const userAnswer = answered[qIndex];
+    const isCorrect = userAnswer === item.correct;
+    if(isCorrect) score++;
+
+    options.forEach((opt, i) => {
+      opt.classList.add('disabled');
+      opt.querySelector('input').disabled = true;
+      if(i === item.correct){
+        opt.classList.add('correct');
+      } else if(i === userAnswer && !isCorrect){
+        opt.classList.add('incorrect');
+      }
+    });
+
+    const fb = document.getElementById('fb-' + qIndex);
+    fb.classList.add('show');
+    if(isCorrect){
+      fb.classList.add('ok');
+      fb.textContent = '✔ Correto!';
+    } else {
+      fb.classList.add('no');
+      fb.textContent = `✘ Incorreto. A resposta correta é: "${item.options[item.correct]}"`;
+    }
+  });
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Quiz corrigido';
+
+  const pct = Math.round((score / questions.length) * 100);
+  scoreText.textContent = `${score} / ${questions.length} (${pct}%)`;
+
+  let msg = '';
+  if(pct === 100) msg = '🏆 Perfeito! Domínio completo do conteúdo de Casos de Uso.';
+  else if(pct >= 80) msg = '🎉 Excelente resultado! Você entendeu muito bem o conteúdo.';
+  else if(pct >= 60) msg = '👍 Bom resultado! Revise alguns pontos para consolidar o conhecimento.';
+  else if(pct >= 40) msg = '📚 Vale a pena revisar o material com mais atenção.';
+  else msg = '🔁 Releia o material e tente novamente — você vai melhorar!';
+  scoreMsg.textContent = msg;
+
+  resultDiv.classList.add('show');
+  resultDiv.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+submitBtn.addEventListener('click', () => {
+  const count = answered.filter(a => a !== null).length;
+  if(count < questions.length){
+    unansweredNote.classList.add('show');
+    // rola até a primeira pergunta não respondida
+    const firstUnanswered = answered.findIndex(a => a === null);
+    if(firstUnanswered !== -1){
+      document.getElementById('q-' + firstUnanswered).scrollIntoView({behavior:'smooth', block:'center'});
+    }
+    return;
+  }
+  unansweredNote.classList.remove('show');
+  correct();
+});
+
+resetBtn.addEventListener('click', () => {
+  answered = new Array(questions.length).fill(null);
+  resultDiv.classList.remove('show');
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Corrigir Quiz';
+  updateProgress();
+  render();
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+render();
+updateProgress();
+</script>
+</body>
+</html>
