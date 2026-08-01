@@ -602,4 +602,4 @@ Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Softwar
 ---
 
 ## Teste os seus conhecimentos
- - [Casos de Uso](https://mehranmisaghi.github.io/ESW-II/materiais/quiz-casos-de-uso.html)
+ - [Casos de Uso](https://mehranmisaghi.github.io/materiais/quiz-casos-de-uso.html)
