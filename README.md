@@ -4,6 +4,20 @@
 
 >Repositório destinado para disciplina de Engenharia de Software II
 
+## Sumário
+
+1. [Ementa da Disciplina](#ementa)
+2. [Metodologia](#Metodologia)
+3. [Avaliação](#avaliacao)
+4. [Cronograma Sugerido](#crongorama)
+5. [Prova I](#provaI)
+6. [Análise e Projeto de Software II](#analiseprojetoii)
+7. [Verificação, validação e testes de software](#veriicacao)
+8. [Aplicações da Engenharia de Software](#aplicacoes)
+9. [Prova II](#provaii)
+10. [Seminários](#seminarios)
+
+
 ## Ementa da Disciplina
 
  Requisitos de software. Processo de engenharia de requisitos. Análise e projeto de software. Verificação e validação de software. Testes de software, suas categorias e níveis. Aplicações da engenharia de software. 
@@ -35,20 +49,27 @@
 
 ## Prova I (01/10/2026)
 
+## Análise e Projeto de Software II
+
 [Análise e Projeto de Software (II) (06/10/2026 - 15/10/2026)](aps2.md)
   - Princípios do Projeto (II)
   - Arquitetura de Software
+
+## Verificação, validação e testes de software
 
 [Verificação, validação e testes de software. (20/10/2026 - 05/11/2026)](vvt.md)
   - Testes
   - Refatoração
 
+## Aplicações da Engenharia de Software
 
 [Aplicações da Engenharia de Software (10/11/2026 - 10/11/2026)](aps.md)
   - Aplicações
   - Engenharia de Software voltado para Negócio
 
 ## Prova II (12/11/2026)
+
+## Seminários
 
 [Seminários (17/11/2026 - 10/12/2026)](seminarios.md)
   - Definição e detalhamento de temas
