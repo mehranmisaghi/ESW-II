@@ -10,11 +10,11 @@
 2. [Metodologia](#Metodologia)
 3. [Avaliação](#avaliação)
 4. [Cronograma Sugerido](#cronograma-sugerido)
-5. [Prova I](#prova-i)
+5. [Prova I](#prova-I)
 6. [Análise e Projeto de Software II](#análise-e-projeto-de-software-ii)
-7. [Verificação, validação e testes de software](#veriicação-,-validação-e-testes-de-software)
+7. [Verificação, validação e testes de software](#veriicação,-validação-e-testes-de-software)
 8. [Aplicações da Engenharia de Software](#aplicações-da-engenharia-de-software)
-9. [Prova II](#prova-ii)
+9. [Prova II](#prova-II)
 10. [Seminários](#seminários)
 
 
