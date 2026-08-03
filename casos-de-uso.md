@@ -31,6 +31,7 @@ permalink: casos-de-uso.md
 16. [Exercício Resolvido: Transferência via PIX](#exercício-resolvido-transferência-via-pix)
 17. [Exercícios Propostos](#exercícios-propostos)
 18. [Slides da Aula](#slides-da-aula)
+19. [Exercícios para apresentar](#exercícios-para-apresentar)
 19. [Teste os seus conhecimentos](#teste-os-seus-conhecimentos)
 
 ---
@@ -601,7 +602,9 @@ Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Softwar
 
 ---
 ## Exercícios para apresentar
- - [Exercícios de Casos de Uso](materiais/ecasosdeuso.md)
+ - [Exercícios de Casos de Uso](ecasosdeuso.md)
+
+---
 ## Teste os seus conhecimentos
  - [Casos de Uso](https://mehranmisaghi.github.io/ESW-II/materiais/qcasos.html)
 
