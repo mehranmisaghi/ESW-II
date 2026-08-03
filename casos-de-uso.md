@@ -600,7 +600,8 @@ Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Softwar
  - [Casos de Uso](https://canva.link/k3wujiefzfk35rh)
 
 ---
-
+## Exercícios para apresentar
+ - [Exercícios de Casos de Uso](materiais/ecasosdeuso.md)
 ## Teste os seus conhecimentos
  - [Casos de Uso](https://mehranmisaghi.github.io/ESW-II/materiais/qcasos.html)
 
