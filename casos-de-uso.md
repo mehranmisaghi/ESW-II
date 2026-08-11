@@ -580,6 +580,8 @@ Casos de uso sugeridos:
 - Registrar Prontuário
 - Prescrever Receita
 
+---
+
 ### Exercícios II — Livro (Enviar até **13/08**)
 
 Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Software Moderna* (Marco Tulio Valente).
