@@ -539,7 +539,7 @@ flowchart TD
 
 ## Exercícios Propostos
 
-### Exercícios I — Casos de Uso
+### Exercícios I — Casos de Uso (Enviar por e-mail até **13/08**)
 
 Escolher **um cenário obrigatório** e **um cenário opcional** dentre os sistemas abaixo. Para cada um, especificar:
 
@@ -580,12 +580,24 @@ Casos de uso sugeridos:
 - Registrar Prontuário
 - Prescrever Receita
 
-### Exercícios II — Livro
+### Exercícios II — Livro (Enviar até **13/08**)
 
 Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Software Moderna* (Marco Tulio Valente).
 
 ---
 
+## Slides da Aula
+ - [Casos de Uso](https://canva.link/k3wujiefzfk35rh)
+
+---
+## Exercícios III (para apresentar nos dias 18 e 20 de agosto )
+ - [Exercícios de Casos de Uso](ecasosdeuso.md)
+
+---
+## Teste os seus conhecimentos
+ - [Casos de Uso](https://mehranmisaghi.github.io/ESW-II/materiais/qcasos.html)
+
+---
 ## Referências utilizadas
 
 - LARMAN, Craig. **Applying UML and Patterns**. Pearson, 2004.
@@ -597,18 +609,6 @@ Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Softwar
 
 ---
 
-## Slides da Aula
- - [Casos de Uso](https://canva.link/k3wujiefzfk35rh)
-
----
-## Exercícios para apresentar
- - [Exercícios de Casos de Uso](ecasosdeuso.md)
-
----
-## Teste os seus conhecimentos
- - [Casos de Uso](https://mehranmisaghi.github.io/ESW-II/materiais/qcasos.html)
-
- ---
   ## [Voltar](https://github.com/mehranmisaghi/ESW-II/tree/main)
 
  ![v](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-II/casos.visitor-badge&left_text=Visitantes&format=true&logo=github)
