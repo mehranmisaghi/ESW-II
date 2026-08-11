@@ -33,6 +33,7 @@ permalink: casos-de-uso.md
 18. [Slides da Aula](#slides-da-aula)
 19. [Exercícios para apresentar](#exercícios-para-apresentar)
 19. [Teste os seus conhecimentos](#teste-os-seus-conhecimentos)
+20. [Capítulo 3 do Livro](#capitulo-3-do-livro)
 
 ---
 
@@ -549,7 +550,7 @@ Escolher **um cenário obrigatório** e **um cenário opcional** dentre os siste
 
 > Trabalho pode ser feito em dupla.
 
-#### (Opcional) Sistema de EAD
+#### (Opcional) Sistema de EAD (atores: professores e estudantes)
 
 Casos de uso sugeridos:
 - Efetuar matrícula
@@ -599,6 +600,8 @@ Resolver os **exercícios 8 e 9 do Capítulo 3** do livro *Engenharia de Softwar
 ## Teste os seus conhecimentos
  - [Casos de Uso](https://mehranmisaghi.github.io/ESW-II/materiais/qcasos.html)
 
+---
+## [Capítulo 3 do livro](https://engsoftmoderna.info/cap3.html)
 ---
 ## Referências utilizadas
 
