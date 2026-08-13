@@ -156,12 +156,12 @@ Escolha **um** dos temas abaixo em trio e elabore um **modelo de casos de uso co
 
 ### Temas sugeridos
 
-- 📦 Sistema de gestão de estoque para uma pequena loja
-- 🏥 Aplicativo de agendamento de consultas médicas
-- 🎓 Sistema de inscrição e gestão de eventos acadêmicos (congressos, seminários)
-- 🚌 Aplicativo de consulta e compra de passagens de ônibus
-- 🐾 Sistema de gestão de uma clínica veterinária
-- 🏠 Aplicativo de aluguel de imóveis por temporada
+- 📦 Sistema de gestão de estoque para uma pequena loja - Hugo, Thiago e Vitor
+- 🏥 Aplicativo de agendamento de consultas médicas - Arhur, Heloisa e Mirella
+- 🎓 Sistema de inscrição e gestão de eventos acadêmicos (congressos, seminários) - Brunno, Carlos e Felipe
+- 🚌 Aplicativo de consulta e compra de passagens de ônibus - Guilherme, Kelvin e Maurício
+- 🐾 Sistema de gestão de uma clínica veterinária - José, Luis e Leonardo
+- 🏠 Aplicativo de aluguel de imóveis por temporada - Henrique, Paulo e Tomas
 
 ---
 
