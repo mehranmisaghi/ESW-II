@@ -154,11 +154,14 @@ Escolha **um** dos temas abaixo em trio e elabore um **modelo de casos de uso co
 - Para **cada** caso de uso: nome, ator, objetivo, pré-condições, fluxo normal e ao menos 1 fluxo alternativo/exceção, e pós-condições
 - Para **2** desses casos de uso, elabore também um **fluxograma Mermaid** representando o fluxo normal e as ramificações
 
-### Temas apresentados nos dias 18 e 20 de agosto
+### Temas apresentados no dia 18 de agosto
 
-- (18/08) 🚌 Aplicativo de consulta e compra de passagens de ônibus - Guilherme, Kelvin e Maurício
-- (18/08) 📦 Sistema de gestão de estoque para uma pequena loja - Hugo, Thiago e Vitor
-- (18/08) 🏠 Aplicativo de aluguel de imóveis por temporada - Henrique, Paulo e Tomas
+- 🚌 Aplicativo de consulta e compra de passagens de ônibus - Guilherme, Kelvin e Maurício
+- 📦 Sistema de gestão de estoque para uma pequena loja - Hugo, Thiago e Vitor
+- 🏠 Aplicativo de aluguel de imóveis por temporada - Henrique, Paulo e Tomas
+
+### Temas apresentados nos dia de agosto
+
 - 🏥 Aplicativo de agendamento de consultas médicas - Arhur, Heloisa e Mirella
 - 🎓 Sistema de inscrição e gestão de eventos acadêmicos (congressos, seminários) - Brunno, Carlos e Felipe
 - 🐾 Sistema de gestão de uma clínica veterinária - José, Luis e Leonardo
