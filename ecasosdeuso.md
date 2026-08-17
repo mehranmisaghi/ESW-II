@@ -145,7 +145,7 @@ Pense em: usuário assinante, usuário visitante, produtor de conteúdo, sistema
 
 ---
 
-## Bloco 4 — Casos de Uso completo
+## Bloco 4 — Casos de Uso completo -
 
 Escolha **um** dos temas abaixo em trio e elabore um **modelo de casos de uso completo**, contendo:
 
