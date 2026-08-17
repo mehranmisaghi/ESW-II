@@ -160,7 +160,7 @@ Escolha **um** dos temas abaixo em trio e elabore um **modelo de casos de uso co
 - 📦 Sistema de gestão de estoque para uma pequena loja - Hugo, Thiago e Vitor
 - 🏠 Aplicativo de aluguel de imóveis por temporada - Henrique, Paulo e Tomas
 
-### Temas apresentados nos dia de agosto
+### Temas apresentados no dia 20 de agosto
 
 - 🏥 Aplicativo de agendamento de consultas médicas - Arhur, Heloisa e Mirella
 - 🎓 Sistema de inscrição e gestão de eventos acadêmicos (congressos, seminários) - Brunno, Carlos e Felipe
