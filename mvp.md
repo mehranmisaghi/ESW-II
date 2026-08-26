@@ -166,8 +166,6 @@ Quando um MVP não valida a hipótese, a equipe pode **pivotar** (mudar de dire�
 | **Dropbox** (2007) | Vídeo explicativo de até 3 minutos (sem produto funcional ainda) | As pessoas veriam valor em sincronização de arquivos na nuvem? |
 | **Airbnb** (2008) | 3 colchões infláveis disponibilizados para teste | As pessoas topariam essa experiência de hospedagem? |
 
-**Contraexemplo — Canva:** a primeira versão levou **um ano** para ser lançada; por isso, provavelmente não deveria ser chamada de MVP (fugiu do princípio de rapidez/mínimo).
-
 ---
 
 ## 7. Exercícios para fazer
