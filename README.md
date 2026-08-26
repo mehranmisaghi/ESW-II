@@ -39,7 +39,7 @@
   
 [Conceitos básicos (04/08/2026 - 25/08/2026)](intro.md)
   - [Casos de Uso](casos-de-uso.md)
-  - Produto Mínimo Viável
+  - [Produto Mínimo Viável](mvp.md)
   - Testes A/B
 
 [Análise e Projeto de Software (I) (27/08/2026 - 29/09/2026)](aps1.md)
