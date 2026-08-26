@@ -1,0 +1,624 @@
+<title>Gabarito MVP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+
+<style>
+  :root {
+    --paper: #E7E4D6;
+    --card: #FBFAF4;
+    --ink: #22283B;
+    --ink-soft: #565F73;
+    --line: #CAC4AE;
+    --accent: #B07D1C;
+    --accent-ink: #FBF6EA;
+    --good: #2F7A4F;
+    --good-soft: #DCEBDF;
+    --bad: #B23B3B;
+    --bad-soft: #F3DEDE;
+    --shadow: rgba(34, 40, 59, 0.12);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14161F;
+      --card: #1C1F2B;
+      --ink: #EAE8DF;
+      --ink-soft: #A6ACC0;
+      --line: #383D4E;
+      --accent: #E0A83C;
+      --accent-ink: #1C1400;
+      --good: #59B980;
+      --good-soft: #1E3327;
+      --bad: #E37272;
+      --bad-soft: #3A2020;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #14161F;
+    --card: #1C1F2B;
+    --ink: #EAE8DF;
+    --ink-soft: #A6ACC0;
+    --line: #383D4E;
+    --accent: #E0A83C;
+    --accent-ink: #1C1400;
+    --good: #59B980;
+    --good-soft: #1E3327;
+    --bad: #E37272;
+    --bad-soft: #3A2020;
+    --shadow: rgba(0, 0, 0, 0.4);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+    padding: clamp(16px, 4vw, 48px);
+    display: flex;
+    justify-content: center;
+  }
+
+  .sheet {
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .letterhead {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .letterhead .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .letterhead h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
+    margin: 2px 0 0;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+  }
+
+  .letterhead p {
+    margin: 2px 0 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  /* mini gabarito strip */
+  .gabarito-strip {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 4px;
+    max-width: 320px;
+  }
+  .gabarito-strip .cell {
+    aspect-ratio: 1;
+    border-radius: 3px;
+    border: 1.5px solid var(--line);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.6rem;
+    color: var(--ink-soft);
+  }
+  .gabarito-strip .cell.answered { background: var(--ink); color: var(--card); border-color: var(--ink); }
+  .gabarito-strip .cell.current { border-color: var(--accent); border-width: 2px; color: var(--accent); font-weight: 700; }
+  .gabarito-strip .cell.good { background: var(--good); border-color: var(--good); color: var(--accent-ink); }
+  .gabarito-strip .cell.bad { background: var(--bad); border-color: var(--bad); color: var(--accent-ink); }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px var(--shadow);
+    padding: clamp(18px, 4vw, 30px);
+  }
+
+  .q-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+  }
+  .q-meta .num { color: var(--accent); font-weight: 600; }
+
+  .q-text {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: clamp(1.05rem, 2.6vw, 1.3rem);
+    line-height: 1.5;
+    margin: 0 0 14px;
+    white-space: pre-line;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1.5px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    font-size: 0.98rem;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .option:hover { border-color: var(--accent); }
+  .option:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .option .bubble {
+    flex: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid var(--ink-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    transition: all 0.15s ease;
+  }
+
+  .option.selected { border-color: var(--ink); background: var(--ink); color: var(--card); }
+  .option.selected .bubble { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+
+  .option.correct { border-color: var(--good); background: var(--good-soft); }
+  .option.correct .bubble { background: var(--good); border-color: var(--good); color: var(--accent-ink); }
+  .option.incorrect { border-color: var(--bad); background: var(--bad-soft); }
+  .option.incorrect .bubble { background: var(--bad); border-color: var(--bad); color: var(--accent-ink); }
+  .option.disabled { cursor: default; }
+
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  button.btn {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 11px 22px;
+    border-radius: 7px;
+    border: 1.5px solid var(--ink);
+    background: var(--ink);
+    color: var(--card);
+    cursor: pointer;
+  }
+  button.btn.ghost { background: transparent; color: var(--ink); }
+  button.btn.accent { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+  button.btn:disabled { opacity: 0.35; cursor: not-allowed; }
+  button.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .hint {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+
+  /* results */
+  .score-block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .score-number {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 9vw, 3.6rem);
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .score-number span { font-size: 0.4em; color: var(--ink-soft); font-weight: 500; }
+  .score-tally {
+    display: flex;
+    gap: 18px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.85rem;
+  }
+  .score-tally .good { color: var(--good); }
+  .score-tally .bad { color: var(--bad); }
+
+  .review-item {
+    border-top: 1px solid var(--line);
+    padding: 16px 0;
+  }
+  .review-item:first-child { border-top: none; }
+  .review-head {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+  }
+  .tag {
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+  }
+  .tag.good { background: var(--good-soft); color: var(--good); }
+  .tag.bad { background: var(--bad-soft); color: var(--bad); }
+  .review-q { font-family: "Fraunces", Georgia, serif; font-size: 1.02rem; margin: 0 0 8px; text-wrap: balance; }
+  .review-line { font-size: 0.9rem; margin: 3px 0; color: var(--ink-soft); }
+  .review-line strong { color: var(--ink); font-weight: 600; }
+  .review-line.wrong-answer strong { color: var(--bad); }
+  .review-line.right-answer strong { color: var(--good); }
+  .explain {
+    margin-top: 8px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    border-left: 2px solid var(--accent);
+    padding-left: 10px;
+  }
+
+  .footer-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    padding-top: 4px;
+  }
+
+  .q-source {
+    display: inline-block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    padding: 4px 9px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+  .q-source a { color: var(--ink-soft); }
+  .q-note {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: -10px 0 16px;
+  }
+  .review-source {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    margin: 2px 0 10px;
+  }
+  .review-source a { color: inherit; }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<div class="sheet">
+  <div class="letterhead">
+    <span class="eyebrow">Engenharia de Software II · Prof. Mehran Misaghi</span>
+    <h1>Questões de Concurso sobre MVP</h1>
+  </div>
+
+  <div id="gabaritoStrip" class="gabarito-strip" aria-hidden="true"></div>
+
+  <div id="app"></div>
+
+  <p class="footer-note">Questões extraídas de provas oficiais de concursos públicos brasileiros, com fonte e gabarito indicados em cada uma · uso didático</p>
+</div>
+
+<script>
+  const QUESTIONS = [
+    {
+      q: "No desenvolvimento centrado no usuário, tanto o conceito de MVP (Minimum Viable Product) quanto o de protótipo são essenciais. Acerca desse assunto, analise as afirmativas a seguir.\n\nI. O protótipo permite testar ideias de produto no mercado real, reduzindo riscos financeiros ao evitar investimentos pesados antes de comprovar o interesse dos usuários.\nII. O MVP deve apresentar o maior número possível de funcionalidades, de modo a avaliar corretamente o seu valor para o usuário.\nIII. Na engenharia de requisitos, os protótipos são empregados nas etapas de especificação, enquanto o MVP é empregado na validação.\n\nEstá correto o que se afirma em",
+      options: ["I, apenas.", "II, apenas.", "III, apenas.", "I e II, apenas.", "II e III, apenas."],
+      letters: ["A", "B", "C", "D", "E"],
+      correct: 0,
+      explain: "Gabarito oficial: A. A afirmativa II contraria a própria definição de MVP (que busca o MENOR conjunto de funcionalidades, não o maior) e a III não corresponde ao uso descrito de protótipo/MVP — por isso apenas a I foi considerada correta pela banca.",
+      source: "FGV — 2024 — EPE (Empresa de Pesquisa Energética) — Analista de Gestão Corporativa, área Tecnologia da Informação (Soluções)",
+      sourceUrl: "https://www.qconcursos.com/questoes-de-concursos/questoes/4d679498-6c"
+    },
+    {
+      q: "Leia as afirmativas a seguir:\n\nI. No modelo hierárquico de dados, uma ligação é uma associação entre quatro registros. O relacionamento entre um registro-pai e vários registros-filhos possui cardinalidade N:N.\nII. MVP é a sigla de Minimum Viable Product (ou produto mínimo viável).\nIII. No contexto da lógica de programação, os operadores lógicos não servem para combinar resultados de expressões, retornando se o resultado final é verdadeiro ou falso.\n\nMarque a alternativa CORRETA:",
+      options: ["Nenhuma afirmativa está correta.", "Está correta a afirmativa I, apenas.", "Está correta a afirmativa II, apenas.", "Está correta a afirmativa III, apenas.", "Todas as afirmativas estão corretas."],
+      letters: ["A", "B", "C", "D", "E"],
+      correct: 2,
+      explain: "Gabarito oficial: C. A afirmativa I está errada (a ligação hierárquica associa dois registros, pai-filho, com cardinalidade 1:N — não quatro registros em N:N). A III também está errada (operadores lógicos servem justamente para combinar expressões e retornar verdadeiro/falso). Apenas a II — a definição da sigla MVP — está correta.",
+      source: "ADM&TEC — 2019 — Prefeitura Municipal de Rio Largo (AL) — Analista de Sistemas",
+      sourceUrl: "https://www.qconcursos.com/questoes-de-concursos/questoes/d6c3462a-90"
+    },
+    {
+      q: "MVP é uma sigla que indica o Produto Mínimo Viável (ou, em inglês, Minimum Viable Product). Ou seja, é a versão mais simples de um produto que pode ser disponibilizada para a validação de um pequeno conjunto de hipóteses sobre o produto e, claro, o negócio. Assim sendo, é extremamente útil na construção de produtos e soluções digitais. Sobre o Produto Mínimo Viável, é CORRETO afirmar:",
+      options: [
+        "A entrega contínua e incremental do design tradicional proporciona o aumento também contínuo do custo de desenvolvimento. Com a aplicação do MVP, tem-se um rompimento com esse modelo de desenvolvimento gradual e cumulativo, o que reduz o custo do projeto de desenvolvimento do produto ao longo do tempo.",
+        "A ideia de construir um MVP é importante porque, se o MVP passar nos testes, temos a certeza de que um produto simples pode ser eficiente e não precisará de quaisquer implementos.",
+        "A ideia por trás de se construir o MVP é acelerar o processo e romper com a lógica de uma evolução gradativa. Com um MVP, tem-se a aplicação prática do \"menos é mais\".",
+        "MVP não significa que o produto não vá evoluir e que suas funcionalidades não serão incrementadas. Muito pelo contrário: a ideia por trás de MVP é o desenvolvimento validado e guiado pelos resultados iniciais."
+      ],
+      letters: ["A", "B", "C", "D"],
+      correct: 3,
+      explain: "Gabarito oficial: D. A alternativa correta reforça a ideia central de que o MVP faz parte de um processo iterativo, guiado por aprendizado validado — e não uma versão estática ou definitiva do produto.",
+      source: "FUMARC — 2023 — Assembleia Legislativa de Minas Gerais (AL-MG) — Analista Legislativo, Programador Visual I (Designer de Produtos Digitais)",
+      sourceUrl: "https://www.qconcursos.com/questoes-de-concursos/questoes/3fe735eb-af",
+      note: "Esta questão foi publicada pela banca com apenas 4 alternativas (A–D), sem alternativa E."
+    },
+    {
+      q: "A engenharia de requisitos é uma etapa crítica no desenvolvimento de software, pois ajuda a garantir que o produto final atenda às necessidades do cliente e aos objetivos do projeto. Acerca da engenharia de requisitos, julgue o item subsequente.\n\n\"O produto mínimo viável (MVP) é uma ferramenta fundamental no processo de validação de uma ideia de negócio, por meio da coleta de problemas, oportunidades e feedbacks.\"",
+      options: ["Certo", "Errado"],
+      letters: ["C", "E"],
+      correct: 1,
+      explain: "Gabarito oficial: Errado. A banca CEBRASPE não disponibilizou publicamente, nas fontes consultadas, o comentário oficial que justifica o erro do item — típico desse formato Certo/Errado, em que pequenas imprecisões no enunciado costumam bastar para o item ser considerado incorreto mesmo quando a ideia geral está próxima do correto.",
+      source: "CESPE/CEBRASPE — 2023 — SERPRO (Serviço Federal de Processamento de Dados) — Analista, Especialização Tecnologia",
+      sourceUrl: "https://www.qconcursos.com/questoes-de-concursos/questoes/37e1c6ef-2e",
+      note: "Questão no formato Certo/Errado (2 opções), característico da banca CEBRASPE — não segue o padrão de 5 alternativas."
+    },
+    {
+      q: "Criada por Eric Ries, a metodologia Lean Startup é uma abordagem de gestão de negócios e desenvolvimento de produtos que visa aumentar a eficiência e reduzir os riscos de empreendimentos, especialmente em startups. Conforme Kuratko (2017), são estágios do ciclo da metodologia Lean Start-up:",
+      options: ["planejar, organizar e avaliar.", "construir, medir e aprender.", "planejar, construir e avaliar.", "construir, organizar e aprender."],
+      letters: ["A", "B", "C", "D"],
+      correct: 1,
+      explain: "Gabarito oficial: B. O ciclo Construir-Medir-Aprender é o núcleo da metodologia Lean Startup, dentro do qual o MVP é construído e testado junto a usuários reais.",
+      source: "IF Sul-rio-grandense — 2025 — Professor EBTT, Área 04: Gestão e Negócios I",
+      sourceUrl: "https://www.qconcursos.com/questoes-de-concursos/questoes/b387382f-ee",
+      note: "Esta questão foi publicada pela banca com apenas 4 alternativas (A–D); trata do ciclo do Lean Startup que fundamenta o MVP, sem citar a sigla \"MVP\" literalmente."
+    }
+  ];
+  const answers = new Array(QUESTIONS.length).fill(null);
+  let current = 0;
+  let finished = false;
+
+  const app = document.getElementById("app");
+  const strip = document.getElementById("gabaritoStrip");
+
+  function renderStrip() {
+    strip.innerHTML = "";
+    QUESTIONS.forEach((_, i) => {
+      const cell = document.createElement("div");
+      cell.className = "cell";
+      cell.textContent = i + 1;
+      if (finished) {
+        if (answers[i] === QUESTIONS[i].correct) cell.classList.add("good");
+        else cell.classList.add("bad");
+      } else {
+        if (answers[i] !== null) cell.classList.add("answered");
+        if (i === current) cell.classList.add("current");
+      }
+      strip.appendChild(cell);
+    });
+  }
+
+  function selectAnswer(qIndex, optIndex) {
+    answers[qIndex] = optIndex;
+    renderQuiz();
+  }
+
+  function renderQuiz() {
+    finished = false;
+    const item = QUESTIONS[current];
+    const chosen = answers[current];
+
+    app.innerHTML = "";
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const meta = document.createElement("div");
+    meta.className = "q-meta";
+    meta.innerHTML = `<span class="num">Questão ${current + 1}</span><span>de ${QUESTIONS.length}</span>`;
+    card.appendChild(meta);
+
+    const qText = document.createElement("p");
+    qText.className = "q-text";
+    qText.textContent = item.q;
+    card.appendChild(qText);
+
+    const srcTag = document.createElement("div");
+    srcTag.className = "q-source";
+    srcTag.innerHTML = item.sourceUrl
+      ? `Fonte: ${item.source} · <a href="${item.sourceUrl}" target="_blank" rel="noopener">ver questão original</a>`
+      : `Fonte: ${item.source}`;
+    card.appendChild(srcTag);
+
+    if (item.note) {
+      const noteP = document.createElement("p");
+      noteP.className = "q-note";
+      noteP.textContent = item.note;
+      card.appendChild(noteP);
+    }
+
+    const opts = document.createElement("div");
+    opts.className = "options";
+    item.options.forEach((optText, i) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "option" + (chosen === i ? " selected" : "");
+      btn.setAttribute("aria-pressed", String(chosen === i));
+      btn.innerHTML = `<span class="bubble">${item.letters[i]}</span><span>${optText}</span>`;
+      btn.addEventListener("click", () => selectAnswer(current, i));
+      opts.appendChild(btn);
+    });
+    card.appendChild(opts);
+
+    const navRow = document.createElement("div");
+    navRow.className = "nav-row";
+    navRow.style.marginTop = "22px";
+
+    const prevBtn = document.createElement("button");
+    prevBtn.className = "btn ghost";
+    prevBtn.textContent = "← Anterior";
+    prevBtn.disabled = current === 0;
+    prevBtn.addEventListener("click", () => { current--; renderQuiz(); });
+
+    const nextBtn = document.createElement("button");
+    const isLast = current === QUESTIONS.length - 1;
+    nextBtn.className = "btn " + (isLast ? "accent" : "");
+    nextBtn.textContent = isLast ? "Corrigir prova" : "Próxima →";
+    nextBtn.addEventListener("click", () => {
+      if (isLast) {
+        finished = true;
+        renderResults();
+      } else {
+        current++;
+        renderQuiz();
+      }
+    });
+
+    navRow.appendChild(prevBtn);
+    navRow.appendChild(nextBtn);
+    card.appendChild(navRow);
+
+    app.appendChild(card);
+
+    const answeredCount = answers.filter(a => a !== null).length;
+    const hint = document.createElement("p");
+    hint.className = "hint";
+    hint.textContent = `${answeredCount} de ${QUESTIONS.length} respondidas · use as setas do teclado para navegar, 1-${item.options.length} para marcar`;
+    app.appendChild(hint);
+
+    renderStrip();
+  }
+
+  function renderResults() {
+    const total = QUESTIONS.length;
+    const correctCount = answers.reduce((acc, a, i) => acc + (a === QUESTIONS[i].correct ? 1 : 0), 0);
+    const wrongCount = total - correctCount;
+    const pct = Math.round((correctCount / total) * 100);
+
+    app.innerHTML = "";
+
+    const card = document.createElement("div");
+    card.className = "card";
+
+    const scoreBlock = document.createElement("div");
+    scoreBlock.className = "score-block";
+    scoreBlock.innerHTML = `
+      <div class="score-number">${pct}<span>%</span></div>
+      <div class="score-tally">
+        <span class="good">${correctCount} certas</span>
+        <span class="bad">${wrongCount} erradas</span>
+      </div>
+    `;
+    card.appendChild(scoreBlock);
+
+    const againBtn = document.createElement("button");
+    againBtn.className = "btn ghost";
+    againBtn.style.marginTop = "18px";
+    againBtn.textContent = "Refazer o quiz";
+    againBtn.addEventListener("click", () => {
+      answers.fill(null);
+      current = 0;
+      renderQuiz();
+    });
+    card.appendChild(againBtn);
+
+    app.appendChild(card);
+
+    const reviewCard = document.createElement("div");
+    reviewCard.className = "card";
+    reviewCard.style.marginTop = "4px";
+
+    QUESTIONS.forEach((item, i) => {
+      const isRight = answers[i] === item.correct;
+      const row = document.createElement("div");
+      row.className = "review-item";
+
+      const head = document.createElement("div");
+      head.className = "review-head";
+      head.innerHTML = `<span>Questão ${i + 1}</span><span class="tag ${isRight ? "good" : "bad"}">${isRight ? "CERTO" : "ERRADO"}</span>`;
+      row.appendChild(head);
+
+      const qP = document.createElement("p");
+      qP.className = "review-q";
+      qP.style.whiteSpace = "pre-line";
+      qP.textContent = item.q;
+      row.appendChild(qP);
+
+      const srcP = document.createElement("p");
+      srcP.className = "review-source";
+      srcP.innerHTML = item.sourceUrl
+        ? `Fonte: ${item.source} · <a href="${item.sourceUrl}" target="_blank" rel="noopener">ver original</a>`
+        : `Fonte: ${item.source}`;
+      row.appendChild(srcP);
+
+      if (item.note) {
+        const noteP = document.createElement("p");
+        noteP.className = "q-note";
+        noteP.style.margin = "0 0 10px";
+        noteP.textContent = item.note;
+        row.appendChild(noteP);
+      }
+
+      const yourAnswer = document.createElement("p");
+      yourAnswer.className = "review-line " + (isRight ? "right-answer" : "wrong-answer");
+      yourAnswer.innerHTML = answers[i] === null
+        ? "Sua resposta: <strong>não respondida</strong>"
+        : `Sua resposta: <strong>${item.letters[answers[i]]}) ${item.options[answers[i]]}</strong>`;
+      row.appendChild(yourAnswer);
+
+      if (!isRight) {
+        const correctAnswer = document.createElement("p");
+        correctAnswer.className = "review-line right-answer";
+        correctAnswer.innerHTML = `Resposta correta: <strong>${item.letters[item.correct]}) ${item.options[item.correct]}</strong>`;
+        row.appendChild(correctAnswer);
+      }
+
+      const explain = document.createElement("p");
+      explain.className = "explain";
+      explain.textContent = item.explain;
+      row.appendChild(explain);
+
+      reviewCard.appendChild(row);
+    });
+
+    app.appendChild(reviewCard);
+    renderStrip();
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (finished) return;
+    const optCount = QUESTIONS[current].options.length;
+    if (e.key >= "1" && e.key <= String(optCount)) {
+      selectAnswer(current, Number(e.key) - 1);
+    } else if (e.key === "ArrowRight" && current < QUESTIONS.length - 1) {
+      current++; renderQuiz();
+    } else if (e.key === "ArrowLeft" && current > 0) {
+      current--; renderQuiz();
+    }
+  });
+
+  renderQuiz();
+</script>
