@@ -10,6 +10,33 @@ permalink: uml.md
 >Baseado em: **Slides da aula**  e no livro **Engenharia de Software Moderna** (Marco Tulio Valente, UFMG) — Capítulo 4: Modelos https://engsoftmoderna.info/cap4.html
 ---
 
+## Sumário
+
+1. [Por quê usar modelos?](#1-por-quê-usar-modelos)
+2. [UML: Unified Modeling Language](#2-uml-unified-modeling-language)
+   - 2.1 [Como usar UML? (classificação de Martin Fowler)](#21-como-usar-uml-classificação-de-martin-fowler)
+   - 2.2 [Tipos de diagramas UML](#22-tipos-de-diagramas-uml)
+3. [Diagrama de Classes](#3-diagrama-de-classes)
+   - 3.1 [Estrutura básica](#31-estrutura-básica)
+   - 3.2 [Visibilidade](#32-visibilidade)
+   - 3.3 [Relacionamentos entre classes](#33-relacionamentos-entre-classes)
+   - 3.4 [Resumo visual dos relacionamentos](#34-resumo-visual-dos-relacionamentos)
+4. [Diagrama de Pacotes](#4-diagrama-de-pacotes)
+5. [Diagrama de Sequência](#5-diagrama-de-sequência)
+   - 5.1 [Notação](#51-notação)
+   - 5.2 [Chamadas internas (this)](#52-chamadas-internas-this)
+   - 5.3 [Exemplo típico](#53-exemplo-típico)
+6. [Diagrama de Atividades](#6-diagrama-de-atividades)
+7. [Resumo geral: quando usar cada diagrama](#7-resumo-geral-quando-usar-cada-diagrama)
+8. [Exercícios](#8-exercícios-i)
+   - [Exercícios (II)](#exercícios-ii)
+   - [Exercícios (III)](#exercícios-iii)
+   - [Exercícios (IV)](#exercícios-iv)
+9. [Referências](#referências)
+10. [Slides](#slides)
+
+---
+
 ## 1. Por quê usar modelos?
 
 Existe uma **lacuna (gap)** entre dois mundos:
@@ -321,3 +348,8 @@ Diagrama **dinâmico/comportamental**, usado para modelar em **alto nível um pr
 - BOOCH, Grady; RUMBAUGH, James; JACOBSON, Ivar. *The Unified Modeling Language User Guide*. Addison-Wesley, 2005.
 - LARMAN, Craig. *Applying UML and Patterns: An Introduction to Object-Oriented Analysis and Design and Iterative Development*. Prentice-Hall, 2004.
 - Slides de aula: Aula 3.2 (UML — Parte I) e Aula 3.3 (UML — Parte II), Profs. Marco Tulio Valente e Mehran Misaghi.
+
+---
+
+## Slides
+[Slides da aula](/Users/mehran/Downloads/uml.md)
