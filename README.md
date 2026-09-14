@@ -47,7 +47,7 @@
   - Princípios de Projeto (I)
   - Acoplamento e Coesão
 
-## Prova I (01/10/2026)
+## Prova I (08/10/2026)
 
 ## Análise e Projeto de Software II
 
