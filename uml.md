@@ -352,4 +352,4 @@ Diagrama **dinâmico/comportamental**, usado para modelar em **alto nível um pr
 ---
 
 ## Slides
-[Slides da aula](/Users/mehran/Downloads/uml.md)
+[Slides da aula](https://canva.link/h225gw6yc43tyfq)
