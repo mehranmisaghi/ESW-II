@@ -235,9 +235,7 @@ Diagrama **dinâmico/comportamental**, usado para modelar em **alto nível um pr
 
 ---
 
-## 8. Exercícios
-
-### Bloco A — Conceituais
+## 8. Exercícios (I)
 
 1. Explique as três formas de uso da UML segundo Fowler (blueprint, sketch e linguagem de programação) e diga em qual contexto (ágil ou tradicional) cada uma faz mais sentido.
 2. Diferencie Engenharia Avante e Engenharia Reversa, dando um exemplo de uso de UML em cada uma.
@@ -245,7 +243,7 @@ Diagrama **dinâmico/comportamental**, usado para modelar em **alto nível um pr
 4. Em um diagrama de atividades, explique a diferença entre um nó de **merge** e um nó de **join**.
 5. Por que o livro-texto recomenda cautela ao usar os conceitos de composição e agregação em diagramas de classes?
 
-### Bloco B — Diagrama de Classes (prática)
+### Exercícios (II)
 
 6. Modele em um Diagrama de Classes UML os seguintes cenários:
    a. `ContaBancaria` possui exatamente um `Cliente`. Um `Cliente` pode ter várias `ContaBancaria`. Existe navegabilidade em ambos os sentidos.
@@ -284,7 +282,7 @@ Diagrama **dinâmico/comportamental**, usado para modelar em **alto nível um pr
    }
    ```
 
-### Bloco C — Diagrama de Sequência (prática)
+### Exercícios (III)
 
 9. Desenhe o diagrama de sequência referente ao código abaixo, começando pela chamada `a.m5()`:
 
@@ -306,17 +304,11 @@ Diagrama **dinâmico/comportamental**, usado para modelar em **alto nível um pr
    }
    ```
 
-### Bloco D — Diagrama de Atividades (prática)
+### Exercícios (IV)
 
 10. Um diagrama de atividades foi desenhado incorretamente, usando um nó de *join* onde deveria haver um *merge* (ou vice-versa), causando um comportamento indesejado no fluxo. Descreva que tipo de erro de lógica isso causaria e como corrigi-lo.
 11. Modele, usando um Diagrama de Atividades, o processo de finalização de uma compra em uma loja virtual: verificação de estoque, cálculo do frete, escolha da forma de pagamento (decisão: cartão ou boleto) e confirmação do pedido.
-
-### Bloco E — Diagrama de Pacotes (prática)
-
 12. Um sistema possui os pacotes `UI`, `BusinessLayer` e `Persistence`. `UI` depende de `BusinessLayer` para acionar regras de negócio, e `BusinessLayer` notifica `UI` sobre eventos (ex.: erro de validação). Apenas `BusinessLayer` acessa `Persistence`. Desenhe o diagrama de pacotes correspondente, indicando corretamente a direção das dependências.
-
-### Bloco F — Estudo dirigido / discussão
-
 13. Segundo a pesquisa de Baltes & Diehl (2013) citada no livro-texto, apenas 9% dos esboços de projeto eram integralmente baseados em UML, mas 48% continham *algum* elemento da notação. Na sua opinião, isso enfraquece ou reforça a importância de se ensinar UML formalmente? Justifique.
 14. Cite as vantagens dos diagramas de atividades da UML em relação a fluxogramas tradicionais.
 
