@@ -309,7 +309,7 @@ Diagrama **dinâmico/comportamental**, usado para modelar em **alto nível um pr
    }
    ```
 
-### Exercícios (III)
+### Exercícios (III) (Pode ser feito em dupla. Enviar por e-mail até o dia 04/10)
 
 9. Desenhe o diagrama de sequência referente ao código abaixo, começando pela chamada `a.m5()`:
 
@@ -331,7 +331,7 @@ Diagrama **dinâmico/comportamental**, usado para modelar em **alto nível um pr
    }
    ```
 
-### Exercícios (IV)
+### Exercícios (IV) (Pode ser feito em dupla. Enviar por e-mail até o dia 04/10)
 
 10. Um diagrama de atividades foi desenhado incorretamente, usando um nó de *join* onde deveria haver um *merge* (ou vice-versa), causando um comportamento indesejado no fluxo. Descreva que tipo de erro de lógica isso causaria e como corrigi-lo.
 11. Modele, usando um Diagrama de Atividades, o processo de finalização de uma compra em uma loja virtual: verificação de estoque, cálculo do frete, escolha da forma de pagamento (decisão: cartão ou boleto) e confirmação do pedido.
