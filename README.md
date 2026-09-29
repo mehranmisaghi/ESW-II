@@ -44,6 +44,7 @@
 
 [Análise e Projeto de Software (I) (15/09/2026 - 29/09/2026)](aps1.md)
   - [UML](uml.md)
+  - [Apresentação Diagramas UML](auml.md)
   - Princípios de Projeto (I)
   - Acoplamento e Coesão
 
