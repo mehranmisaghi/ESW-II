@@ -1,10 +1,9 @@
 # Integridade Conceitual — Notas de Aula
 
-**Disciplina:** Engenharia de Software II
-**Professor:** Mehran Misaghi
-**Série:** Princípios de Projeto (Parte I) — página 1 de 4
 
-> **Nesta série:** **1. Integridade Conceitual** · [2. Ocultamento de Informação](principios_projeto_2_ocultamento_informacao.md) · [3. Coesão](principios_projeto_3_coesao.md) · [4. Acoplamento](principios_projeto_4_acoplamento.md)
+> Este material foi elaborado com auxílio de IA e revisado. Qualquer dúvida converse com professor.
+
+> **Nesta série** **1. Integridade Conceitual** · [2. Ocultamento de Informação](principios_projeto_2_ocultamento_informacao.md) · [3. Coesão](principios_projeto_3_coesao.md) · [4. Acoplamento](principios_projeto_4_acoplamento.md)
 
 ---
 

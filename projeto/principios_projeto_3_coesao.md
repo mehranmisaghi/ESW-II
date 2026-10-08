@@ -1,8 +1,6 @@
 # Coesão — Notas de Aula
 
-**Disciplina:** Engenharia de Software II
-**Professor:** Mehran Misaghi
-**Série:** Princípios de Projeto (Parte I) — página 3 de 4
+> Este material foi elaborado com auxílio de IA e revisado. Qualquer dúvida converse com professor.
 
 **Nesta série:** 
 ---
