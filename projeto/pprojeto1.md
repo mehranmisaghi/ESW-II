@@ -9,4 +9,11 @@
 ## Slides da aula
 - [Princípios do Projeto - Parte I](https://canva.link/hgpq4dgx7h9s7fp)
 ---
+## Exercícios 
+- A partir do slide 56 
+- Pode feito em dupla
+- **SEM USA DE IA!**
+- Enviar por e-mail até (no máximo dia 13/10)
+---
+
 ### [Voltar](/README.md)
