@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simulado Prova I</title>
+<meta name="description" content="Simulado da Prova I de Engenharia de Software II ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --paper: #E7E4D6;
+    --card: #FBFAF4;
+    --ink: #22283B;
+    --ink-soft: #565F73;
+    --line: #CAC4AE;
+    --accent: #B07D1C;
+    --accent-ink: #FBF6EA;
+    --good: #2F7A4F;
+    --good-soft: #DCEBDF;
+    --bad: #B23B3B;
+    --bad-soft: #F3DEDE;
+    --code-bg: #EFECE0;
+    --shadow: rgba(34, 40, 59, 0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14161F; --card: #1C1F2B; --ink: #EAE8DF; --ink-soft: #A6ACC0; --line: #383D4E;
+      --accent: #E0A83C; --accent-ink: #1C1400; --good: #59B980; --good-soft: #1E3327;
+      --bad: #E37272; --bad-soft: #3A2020; --code-bg: #232736; --shadow: rgba(0, 0, 0, 0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14161F; --card: #1C1F2B; --ink: #EAE8DF; --ink-soft: #A6ACC0; --line: #383D4E;
+    --accent: #E0A83C; --accent-ink: #1C1400; --good: #59B980; --good-soft: #1E3327;
+    --bad: #E37272; --bad-soft: #3A2020; --code-bg: #232736; --shadow: rgba(0, 0, 0, 0.4);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif; font-size: 17px; line-height: 1.5;
+    padding: clamp(16px, 4vw, 48px) 16px 64px;
+  }
+  .sheet { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
+
+  header.letterhead { padding-bottom: 16px; border-bottom: 2px solid var(--ink); display: flex; flex-direction: column; gap: 6px; }
+  .eyebrow { font-family: "IBM Plex Mono", monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+  h1 { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: clamp(1.7rem, 5vw, 2.4rem); margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+  .lede { margin: 0; color: var(--ink-soft); max-width: 62ch; }
+  .facts { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 6px; font-family: "IBM Plex Mono", monospace; font-size: 0.78rem; color: var(--ink-soft); }
+  .facts b { color: var(--ink); font-weight: 600; }
+
+  .status {
+    position: sticky; top: 8px; z-index: 5; display: flex; align-items: center; gap: 16px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px;
+    box-shadow: 0 4px 16px var(--shadow);
+  }
+  .bar { flex: 1; height: 8px; background: var(--paper); border-radius: 99px; overflow: hidden; border: 1px solid var(--line); }
+  .bar > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s ease; }
+  .counts { font-family: "IBM Plex Mono", monospace; font-size: 0.8rem; white-space: nowrap; color: var(--ink-soft); }
+  .counts .ok { color: var(--good); font-weight: 600; }
+  .counts .no { color: var(--bad); font-weight: 600; }
+
+  #quiz { display: flex; flex-direction: column; gap: 16px; }
+  .section-title { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 1.15rem; margin: 22px 0 -6px; display: flex; align-items: baseline; gap: 10px; }
+  .section-title small { font-family: "IBM Plex Mono", monospace; font-weight: 500; font-size: 0.72rem; color: var(--ink-soft); }
+
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 6px 24px var(--shadow); padding: clamp(16px, 4vw, 26px); }
+  .q-meta { display: flex; gap: 10px; align-items: baseline; font-family: "IBM Plex Mono", monospace; font-size: 0.76rem; color: var(--ink-soft); margin-bottom: 8px; flex-wrap: wrap; }
+  .q-meta .num { color: var(--accent); font-weight: 600; }
+  .tag { border: 1px solid var(--line); border-radius: 4px; padding: 0 7px; }
+  .tag.code { border-color: var(--accent); color: var(--accent); }
+  .q-text { font-family: "Fraunces", Georgia, serif; font-size: 1.08rem; line-height: 1.5; margin: 0 0 10px; }
+  .items { margin: 0 0 10px; padding-left: 14px; border-left: 2px solid var(--line); }
+  .items p { margin: 4px 0; }
+  pre { margin: 6px 0 12px; padding: 12px 14px; background: var(--code-bg); border: 1px solid var(--line); border-radius: 8px; overflow-x: auto; font-family: "IBM Plex Mono", monospace; font-size: 0.86rem; line-height: 1.55; color: var(--ink); }
+  .options { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+  .option {
+    display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left; padding: 10px 14px;
+    border-radius: 8px; border: 1.5px solid var(--line); background: transparent; color: var(--ink);
+    font: inherit; font-size: 0.98rem; cursor: pointer; transition: border-color .15s ease, background .15s ease;
+  }
+  .option:hover:not(:disabled) { border-color: var(--accent); }
+  .option:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .option:disabled { cursor: default; }
+  .bubble {
+    flex: none; width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--ink-soft); display: flex;
+    align-items: center; justify-content: center; font-family: "IBM Plex Mono", monospace; font-weight: 600; font-size: 0.82rem; color: var(--ink-soft); margin-top: 1px;
+  }
+  .option.correct { border-color: var(--good); background: var(--good-soft); }
+  .option.correct .bubble { background: var(--good); border-color: var(--good); color: var(--accent-ink); }
+  .option.incorrect { border-color: var(--bad); background: var(--bad-soft); }
+  .option.incorrect .bubble { background: var(--bad); border-color: var(--bad); color: var(--accent-ink); }
+  .option.dim { opacity: .6; }
+  .feedback { margin-top: 12px; padding: 10px 12px; border-left: 3px solid var(--accent); background: var(--paper); border-radius: 0 6px 6px 0; font-size: 0.93rem; }
+  .feedback strong.ok { color: var(--good); }
+  .feedback strong.no { color: var(--bad); }
+  .feedback p { margin: 4px 0 0; color: var(--ink-soft); }
+
+  .result h2 { font-family: "Fraunces", Georgia, serif; margin: 0 0 6px; font-size: 1.4rem; }
+  .score { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: clamp(2.4rem, 9vw, 3.4rem); line-height: 1; font-variant-numeric: tabular-nums; }
+  .score span { font-size: .4em; color: var(--ink-soft); font-weight: 500; }
+  table.temas { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 0.93rem; }
+  table.temas td, table.temas th { padding: 6px 4px; border-bottom: 1px solid var(--line); text-align: left; }
+  table.temas td.n { font-family: "IBM Plex Mono", monospace; text-align: right; white-space: nowrap; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+  button.btn { font: inherit; font-weight: 600; font-size: 0.92rem; padding: 10px 20px; border-radius: 7px; border: 1.5px solid var(--ink); background: var(--ink); color: var(--card); cursor: pointer; }
+  button.btn.ghost { background: transparent; color: var(--ink); }
+  button.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .hidden { display: none !important; }
+  footer { text-align: center; font-size: 0.8rem; color: var(--ink-soft); padding-top: 8px; }
+  footer a { color: inherit; }
+  @media (max-width: 520px) { .counts .lbl { display: none; } body { font-size: 16px; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<main class="sheet">
+  <header class="letterhead">
+    <span class="eyebrow">Engenharia de Software II · Prof. Mehran Misaghi · IFC</span>
+    <h1>Simulado — Prova I</h1>
+    <p class="lede">30 questões objetivas sobre Casos de Uso, MVP, Testes A/B, UML e Princípios de Projeto (I). Escolha uma alternativa: a correção e a explicação aparecem logo em seguida.</p>
+    <div class="facts"><span><b>30</b> questões</span><span><b>10</b> com código</span><span><b>5</b> alternativas, <b>1</b> correta</span></div>
+  </header>
+
+  <div class="status" role="status" aria-live="polite">
+    <div class="bar" aria-hidden="true"><span id="bar"></span></div>
+    <div class="counts"><span id="done">0</span>/30 <span class="lbl">respondidas</span> · <span class="ok" id="hits">0</span> <span class="lbl">acertos</span> · <span class="no" id="miss">0</span> <span class="lbl">erros</span></div>
+  </div>
+
+  <div id="quiz"></div>
+
+  <section class="card result hidden" id="result" aria-live="polite">
+    <h2>Resultado</h2>
+    <div class="score" id="score">0<span>/30</span></div>
+    <table class="temas" id="temas"></table>
+    <div class="actions">
+      <button class="btn" id="redo-wrong">Refazer só as que errei</button>
+      <button class="btn ghost" id="reset">Recomeçar do zero</button>
+    </div>
+  </section>
+
+  <footer>Simulado para estudo — não vale nota. Material da disciplina: <a href="https://github.com/mehranmisaghi/ESW-II">github.com/mehranmisaghi/ESW-II</a></footer>
+</main>
+
+<script>
+const QUESTIONS = [{"n": 1, "t": "Casos de Uso", "q": "Segundo o material, os casos de uso são úteis para diferentes membros da equipe. Qual associação entre papel e uso está CORRETA?", "code": null, "items": null, "q2": null, "o": ["Clientes os usam para validar o que o sistema fará; projetistas, para encontrar classes; testadores, como base para casos de teste.", "Projetistas os usam para definir a interface gráfica pixel a pixel; clientes não participam.", "Testadores os usam apenas para medir o desempenho do sistema em produção.", "Clientes os usam para escolher a linguagem de programação; testadores, para definir o orçamento do projeto.", "Somente os programadores usam casos de uso, para gerar o código automaticamente."], "c": 0, "e": "Para clientes, casos de uso servem para validação; para desenvolvedores, são ponto de partida para refinar requisitos — o projetista os usa para encontrar classes e o testador, como base para casos de teste."}, {"n": 2, "t": "Casos de Uso", "q": "Assinale a alternativa que apresenta uma PÓS-CONDIÇÃO adequada para o cenário básico do caso de uso \"Cancelar Pedido\".", "code": null, "items": null, "q2": null, "o": ["O cliente clicou no botão \"Cancelar\".", "O sistema deve validar se o pedido pode ser cancelado.", "O cliente está autenticado no sistema.", "O pedido está com a situação \"cancelado\" e o valor pago foi estornado ao cliente.", "O sistema exibe a tela de confirmação de cancelamento."], "c": 3, "e": "Pós-condição descreve o estado do sistema após a conclusão do cenário. \"Cliente autenticado\" é pré-condição; clicar em botão e exibir tela são ações de interface; \"validar\" é um passo do fluxo."}, {"n": 3, "t": "Casos de Uso", "q": "Ao detalhar as formas de pagamento de um caso de uso de vendas, o material alerta que \"casos de uso não são algoritmos\". Essa afirmação significa que:", "code": null, "items": null, "q2": null, "o": ["o foco do caso de uso é entender e delimitar o problema (requisitos), e não descrever a solução de implementação.", "casos de uso não podem ter passos numerados.", "casos de uso não podem conter fluxos alternativos ou extensões.", "casos de uso devem ser escritos diretamente em pseudocódigo.", "casos de uso só podem ser usados depois que o sistema estiver implementado."], "c": 0, "e": "Ao escrever casos de uso ainda estamos levantando requisitos: o objetivo é entender o problema, não projetar a solução."}, {"n": 4, "t": "Casos de Uso", "q": "Durante o levantamento de requisitos, qual das perguntas a seguir ajuda a identificar os ATORES do sistema (e não os casos de uso)?", "code": null, "items": null, "q2": null, "o": ["Quais tarefas os atores irão realizar no sistema?", "Quais são as entradas e saídas de cada funcionalidade?", "Quais sistemas de software ou hardware fornecerão informações para o sistema proposto?", "O ator precisa criar, alterar, remover ou consultar alguma informação no sistema?", "Qual é o fluxo mais usual para concluir a funcionalidade com sucesso?"], "c": 2, "e": "Perguntar quem usa o sistema, quem precisa de suas informações e quais sistemas fornecem ou recebem dados identifica atores. As demais perguntas servem para encontrar casos de uso ou detalhar cenários."}, {"n": 5, "t": "Casos de Uso", "q": "Em um sistema de caixa eletrônico, qual dos itens a seguir é o MELHOR candidato a caso de uso, considerando que a interação deve ter significado para o usuário e terminar em um estado completo?", "code": null, "items": null, "q2": null, "o": ["Validar Cartão no Banco de Dados", "Efetuar Saque", "Imprimir Recibo", "Digitar Senha", "Tabela de Contas"], "c": 1, "e": "\"Efetuar Saque\" é uma funcionalidade completa com valor para o cliente. Digitar senha, imprimir recibo e validar cartão são passos dentro de um caso de uso; \"Tabela de Contas\" é estrutura interna."}, {"n": 6, "t": "Casos de Uso", "q": "Na terminologia de cenários de casos de uso, assinale a associação CORRETA.", "code": null, "items": null, "q2": null, "o": ["Cada caso de uso possui exatamente um cenário.", "Comportamento é sinônimo de pré-condição.", "Cenário é o nome dado ao ator principal do caso de uso.", "Passo é o caminho completo trilhado pelo ator; cenário é uma atividade isolada.", "Passo é uma atividade dentro de um cenário; o comportamento de um caso de uso é o conjunto finito de seus cenários."], "c": 4, "e": "Cenário = fluxo (caminho trilhado pelo ator); passo = uma atividade dentro do cenário; comportamento = conjunto finito de cenários."}, {"n": 7, "t": "MVP", "q": "Na sigla MVP (Produto Mínimo Viável), a palavra \"Viável\" está associada à pergunta:", "code": null, "items": null, "q2": null, "o": ["O produto já está pronto para ser vendido em larga escala?", "O produto segue todas as boas práticas de Engenharia de Software?", "O produto pode ser usado de verdade, ainda que de forma simples?", "Existe demanda real, ou seja, o produto terá mercado?", "Qual é o menor conjunto de funcionalidades possível?"], "c": 3, "e": "Produto → pode ser usado; Mínimo → menor conjunto de funcionalidades; Viável → terá mercado?"}, {"n": 8, "t": "MVP", "q": "Uma startup lançou um aplicativo de gestão de academias. Os dados mostraram que apenas o recurso de agendamento de aulas era realmente usado, e a equipe decidiu transformar esse recurso no produto principal. Esse é um exemplo de pivô do tipo:", "code": null, "items": null, "q2": null, "o": ["Aplicação → Plataforma.", "Segmento de clientes.", "Zoom-in.", "Tecnologia.", "Desistência."], "c": 2, "e": "No pivô zoom-in, uma funcionalidade específica vira o produto principal — como o Flickr, que nasceu de um jogo online."}, {"n": 9, "t": "MVP", "q": "Ao final de um ciclo Construir–Medir–Aprender, a equipe conclui que a hipótese foi validada e o produto atingiu o Product Market Fit (PMF). O próximo passo recomendado é:", "code": null, "items": null, "q2": null, "o": ["pivotar imediatamente para um novo segmento de clientes.", "encerrar o projeto, pois o MVP já cumpriu seu papel.", "lançar um novo MVP com a mesma hipótese, para confirmar o resultado.", "construir um produto robusto, agora aplicando as boas práticas de Engenharia de Software.", "manter o MVP em produção sem alterações, pois ele já é o produto final."], "c": 3, "e": "Os quatro caminhos ao final do ciclo são: ajustar, pivotar, desistir ou — ao atingir o PMF — construir o produto robusto (o MVP pode até ser reimplementado)."}, {"n": 10, "t": "MVP", "q": "O MVP herda ideias do pensamento enxuto (Lean), criado na Toyota no pós-guerra. Os dois pilares do Sistema Toyota de Produção, criado por Taiichi Ohno, são:", "code": null, "items": null, "q2": null, "o": ["Integração Contínua e Entrega Contínua.", "Just-in-Time e Jidoka.", "Kanban e Scrum.", "Construir e Medir.", "Kaizen e Six Sigma."], "c": 1, "e": "Just-in-Time (produzir só o necessário, quando necessário) e Jidoka (interromper o processo diante de anomalias para preservar a qualidade)."}, {"n": 11, "t": "MVP", "q": "Em 1999, a Zappos colocou no ar um site simples com fotos de sapatos de lojas físicas; quando alguém comprava, a equipe ia à loja, comprava o par e o enviava manualmente. Esse MVP buscava testar a hipótese de que:", "code": null, "items": null, "q2": null, "o": ["uma rede social fechada para universitários teria interesse.", "um vídeo explicativo seria suficiente para atrair investidores.", "um sistema totalmente automatizado reduziria o custo de entrega.", "colchões infláveis poderiam ser alugados como hospedagem.", "as pessoas comprariam sapatos pela internet, antes de investir em estoque e logística."], "c": 4, "e": "O backend 100% manual permitiu validar a demanda (comprar sapatos online) sem construir o sistema completo. As outras alternativas misturam os casos Dropbox, Facebook e Airbnb."}, {"n": 12, "t": "Testes A/B", "q": "Uma equipe usa a função abaixo para dividir os usuários de um teste A/B. Ela é executada toda vez que qualquer página do site é carregada.", "code": "function escolherVersao() {\n  // chamada a cada carregamento de página\n  return Math.random() < 0.5 ? \"controle\" : \"tratamento\";\n}", "items": null, "q2": "Qual é o principal problema dessa implementação?", "o": ["Um mesmo usuário pode ver versões diferentes a cada acesso, o que distorce os dados; a versão deveria ser atribuída uma vez por usuário e mantida durante todo o experimento.", "A função deveria perguntar ao usuário qual versão ele prefere ver.", "A divisão 50%/50% é proibida em testes A/B; seria necessário usar 70%/30%.", "O código está correto; não há nenhum problema na divisão dos usuários.", "Math.random() não gera números entre 0 e 1, então todos os usuários vão para o controle."], "c": 0, "e": "A divisão deve ser aleatória, mas o mesmo usuário precisa ver sempre a mesma versão durante o experimento; caso contrário, não se sabe a qual versão atribuir a conversão."}, {"n": 13, "t": "Testes A/B", "q": "Quando um teste A/B é tratado como um teste de hipóteses, a hipótese nula (H0) afirma que:", "code": null, "items": null, "q2": null, "o": ["os dois grupos precisam ter exatamente o mesmo número de conversões.", "a versão B não é melhor que a versão A, e a diferença observada é apenas ruído (acaso).", "o tamanho da amostra não interfere no resultado.", "a versão B é melhor que a versão A.", "a versão A deve ser descartada antes do fim do experimento."], "c": 1, "e": "H0: B não é melhor que A (diferença por acaso). H1: B é melhor que A."}, {"n": 14, "t": "Testes A/B", "q": "Em qual das situações a seguir um teste A/B é MENOS apropriado?", "code": null, "items": null, "q2": null, "o": ["Escolher entre duas miniaturas (thumbnails) para um vídeo.", "Comparar duas ordens de apresentação dos produtos em uma vitrine virtual.", "Corrigir um defeito que impede todos os clientes de finalizar o pagamento.", "Decidir entre dois textos para o botão de assinatura de um serviço.", "Comparar dois algoritmos de recomendação para ver qual gera mais cliques."], "c": 2, "e": "Testes A/B fazem sentido quando há dúvida real sobre qual alternativa gera mais valor. Corrigir um defeito que bloqueia pagamentos não tem dúvida: é preciso corrigir para todos."}, {"n": 15, "t": "Testes A/B", "q": "Um teste A/B executado com uma amostra pequena não encontrou diferença estatisticamente significativa entre as versões A e B. A conclusão mais adequada é:", "code": null, "items": null, "q2": null, "o": ["o teste deveria ter sido encerrado ainda mais cedo.", "está comprovado que a versão B não faz nenhuma diferença.", "não se pode afirmar que as versões são equivalentes; a amostra pode ter sido pequena demais para detectar o efeito.", "o resultado prova que a ferramenta de experimentação está com defeito.", "a versão B deve ser adotada, pois não piorou o resultado."], "c": 2, "e": "\"Sem significância\" não é o mesmo que \"não faz diferença\": pode faltar amostra para detectar o efeito."}, {"n": 16, "t": "UML", "q": "Considere o código Java abaixo:", "code": "class Turma {\n  private String codigo;\n  private List<Aluno> alunos;\n}\nclass Aluno {\n  private String nome;\n}", "items": null, "q2": "No diagrama de classes, a forma CORRETA de representar a relação entre Turma e Aluno é:", "o": ["associação (seta contínua) de Turma para Aluno, com multiplicidade * do lado de Aluno.", "dependência (seta tracejada) de Aluno para Turma, com multiplicidade 1.", "herança (seta com ponta triangular vazada) de Aluno para Turma.", "associação de Aluno para Turma, com multiplicidade 0..1 do lado de Turma.", "nenhuma relação, pois List é uma classe da biblioteca padrão."], "c": 0, "e": "Turma possui um atributo cujo tipo é uma coleção de Aluno: há associação de Turma para Aluno, e a multiplicidade * indica zero ou mais alunos."}, {"n": 17, "t": "UML", "q": "Considere o código Java abaixo:", "code": "class Funcionario {\n  protected double salario;\n}\nclass Gerente extends Funcionario {\n  public double calcularBonus(Meta meta) {\n    return salario * meta.getPercentual();\n  }\n}", "items": null, "q2": "No diagrama de classes, as relações que partem da classe Gerente são:", "o": ["apenas herança para Funcionario; parâmetros de métodos não geram relação.", "associação para Funcionario e associação para Meta (setas contínuas).", "dependência para Funcionario e herança para Meta.", "herança para Funcionario (seta contínua com ponta triangular vazada) e dependência para Meta (seta tracejada).", "herança para Funcionario e associação para Meta, pois Meta é usada no cálculo."], "c": 3, "e": "\"extends\" gera herança. Meta aparece apenas como parâmetro de método (não é atributo), o que caracteriza dependência."}, {"n": 18, "t": "UML", "q": "Considere o método abaixo, executado a partir da chamada caixa.fechar():", "code": "class Caixa {\n  void fechar() {\n    double total = carrinho.calcularTotal();\n    gateway.cobrar(total);\n    this.emitirRecibo();\n  }\n  void emitirRecibo() { ... }\n}", "items": null, "q2": "No diagrama de sequência correspondente, é CORRETO afirmar:", "o": ["como cobrar() não retorna valor, a mensagem não pode aparecer no diagrama.", "as três chamadas ocorrem em paralelo e por isso ficam na mesma altura do diagrama.", "o diagrama mostra as classes Caixa, Carrinho e Gateway com seus atributos e métodos.", "carrinho recebe calcularTotal(), gateway recebe cobrar(total), e emitirRecibo() é uma chamada do próprio objeto caixa, representada por uma nova barra de ativação sobre a de fechar().", "emitirRecibo() deve ser representada como uma mensagem enviada ao objeto gateway."], "c": 3, "e": "O diagrama de sequência mostra objetos e mensagens em ordem temporal. Chamadas a this geram uma barra de ativação que nasce da barra do método chamador; retornos void podem ser omitidos."}, {"n": 19, "t": "UML", "q": "Considere a classe Java abaixo:", "code": "public class Conta {\n  private double saldo;\n  public void depositar(double valor) { ... }\n  private void registrarLog() { ... }\n}", "items": null, "q2": "Em um diagrama de classes UML, os membros dessa classe são representados como:", "o": ["- saldo, - depositar(valor), - registrarLog()", "- saldo, + depositar(valor), - registrarLog()", "# saldo, + depositar(valor), # registrarLog()", "+ saldo, - depositar(valor), + registrarLog()", "+ saldo, + depositar(valor), + registrarLog()"], "c": 1, "e": "Na UML, \"-\" indica privado e \"+\" indica público."}, {"n": 20, "t": "UML", "q": "Um desenvolvedor recém-contratado recebe um sistema legado sem documentação e desenha alguns diagramas de classes a partir do código-fonte para entender sua estrutura. Esse uso da UML como esboço é chamado de:", "code": null, "items": null, "q2": null, "o": ["modelagem formal com Redes de Petri.", "UML como linguagem de programação (MDD).", "UML como planta técnica (blueprint).", "engenharia avante (forward engineering).", "engenharia reversa."], "c": 4, "e": "Engenharia reversa: o modelo é usado para explicar um código que já existe. Na engenharia avante, o modelo vem antes do código."}, {"n": 21, "t": "UML", "q": "Na hierarquia de diagramas da UML, os chamados diagramas de implementação são:", "code": null, "items": null, "q2": null, "o": ["Temporização e Visão Geral da Interação.", "Atividades e Casos de Uso.", "Sequência e Comunicação.", "Classes e Objetos.", "Componentes e Implantação."], "c": 4, "e": "Componentes (visão lógica) e Implantação (visão física) formam o grupo dos diagramas de implementação, dentro dos estruturais."}, {"n": 22, "t": "UML", "q": "Uma vantagem dos diagramas de atividades da UML em relação aos fluxogramas tradicionais é:", "code": null, "items": null, "q2": null, "o": ["a possibilidade de representar decisões com condições.", "o fato de serem diagramas estruturais.", "a dispensa de um nó inicial.", "a representação das chamadas de método entre objetos ao longo do tempo.", "a possibilidade de representar fluxos concorrentes (paralelos), por meio de fork e join."], "c": 4, "e": "Fluxogramas não suportam concorrência; diagramas de atividades a representam com fork (dividir) e join (sincronizar). Decisões existem nos dois."}, {"n": 23, "t": "Princípios de Projeto I", "q": "Considere a classe abaixo:", "code": "class Fila<T> {\n  void enfileirar(T elem) { ... }\n  T desenfileirar() { ... }\n  int tamanho() { ... }\n  boolean vazia() { ... }\n  void imprimirRelatorioDeVendas() { ... }\n}", "items": null, "q2": "Qual método prejudica a coesão da classe?", "o": ["enfileirar(T elem)", "imprimirRelatorioDeVendas()", "tamanho()", "desenfileirar()", "vazia()"], "c": 1, "e": "Todos os demais métodos manipulam os elementos da fila. Imprimir relatório de vendas é outro assunto e daria à classe um segundo motivo para mudar."}, {"n": 24, "t": "Princípios de Projeto I", "q": "Considere o código abaixo:", "code": "interface Notificador {\n  void enviar(String msg);\n}\nclass EmailNotificador implements Notificador { ... }\nclass SmsNotificador implements Notificador { ... }\n\nclass Pedido {\n  void finalizar(Notificador n) {\n    // ...\n    n.enviar(\"Pedido finalizado\");\n  }\n}", "items": null, "q2": "Sobre esse projeto, é CORRETO afirmar:", "o": ["O uso da interface viola o ocultamento de informação, pois expõe os detalhes do envio.", "Pedido depende apenas da interface Notificador; uma nova implementação (por exemplo, para WhatsApp) pode ser criada sem alterar Pedido.", "Pedido não possui interface, pois não usa a palavra reservada interface.", "Para enviar SMS, é obrigatório alterar o código do método finalizar().", "Pedido está fortemente acoplado a EmailNotificador, pois conhece sua implementação."], "c": 1, "e": "Pedido conhece só a interface (palavra reservada interface). As implementações ficam ocultas e podem mudar ou surgir sem afetar o cliente."}, {"n": 25, "t": "Princípios de Projeto I", "q": "Considere o código abaixo:", "code": "import java.util.ArrayList;\n\nclass Relatorio {\n  private ArrayList<String> linhas = new ArrayList<>();\n\n  public void adicionarLinha(String l) {\n    linhas.add(l);\n  }\n}", "items": null, "q2": "Sobre o acoplamento entre Relatorio e ArrayList, é CORRETO afirmar:", "o": ["É um acoplamento de controle, pois add() decide o fluxo de execução de Relatorio.", "Não há acoplamento, pois ArrayList pertence à biblioteca padrão.", "É um acoplamento ruim, pois toda dependência entre classes deve ser eliminada.", "É um acoplamento aceitável: ArrayList presta um serviço útil, tem interface estável e é usada apenas por meio de seus métodos públicos.", "É um acoplamento comum, pois ArrayList é uma variável global."], "c": 3, "e": "Nenhuma classe é uma ilha: o objetivo é eliminar o acoplamento ruim, não todo acoplamento. Os três critérios do acoplamento aceitável são atendidos."}, {"n": 26, "t": "Princípios de Projeto I", "q": "Considere a classe e o trecho de código cliente abaixo:", "code": "public class ContaCorrente {\n  private double saldo;\n  public double getSaldo() { return saldo; }\n  public void setSaldo(double s) { saldo = s; }\n}\n// código cliente\nc.setSaldo(c.getSaldo() - 100);", "items": null, "q2": "Assinale a alternativa CORRETA.", "o": ["A classe aplica corretamente o ocultamento de informação, pois o atributo saldo é private.", "O problema seria resolvido tornando o atributo saldo public e removendo os métodos.", "A classe tem baixa coesão, pois getSaldo e setSaldo tratam de assuntos diferentes.", "O código apresenta acoplamento de controle, pois setSaldo recebe uma flag.", "Embora saldo seja private, o setter público expõe o estado interno; seria melhor oferecer operações como sacar(valor) e depositar(valor), que concentram as regras na classe."], "c": 4, "e": "Tornar atributos private e criar get/set para todos não garante ocultamento de informação. O cliente continua manipulando o saldo diretamente, e regras (como impedir saldo negativo) ficam espalhadas."}, {"n": 27, "t": "Princípios de Projeto I", "q": "Considere a assinatura e os comentários do método abaixo:", "code": "void validarESalvarCliente(Cliente c) {\n  // valida CPF, e-mail e telefone\n  // ...\n  // abre conexão e grava no banco de dados\n  // ...\n}", "items": null, "q2": "O que o nome do método sugere sobre o projeto e qual seria uma melhoria adequada?", "o": ["Sugere acoplamento comum; a melhoria é usar uma variável global para o cliente.", "Sugere alta coesão, pois tudo se refere ao cliente; não é preciso mudar nada.", "Sugere baixa coesão, pois o método faz duas coisas; uma melhoria é separá-lo em validarCliente(c) e salvarCliente(c).", "Sugere acoplamento de dados; a melhoria é passar uma flag indicando se deve validar ou salvar.", "Sugere falta de integridade conceitual; a melhoria é renomear para validar_e_salvar_cliente."], "c": 2, "e": "Quando o nome de um módulo precisa de \"e\" ou \"ou\", ele provavelmente faz mais de uma coisa. Dividir por responsabilidade aumenta a coesão."}, {"n": 28, "t": "Princípios de Projeto I", "q": "Em projeto de software, um problema grande é decomposto em partes menores, chamadas módulos (funções, classes, pacotes, serviços etc.). Todo módulo é formado por:", "code": null, "items": null, "q2": null, "o": ["interface (o que oferece aos clientes) e implementação (como funciona internamente).", "atributos públicos e banco de dados.", "casos de uso e diagramas de sequência.", "código-fonte e documentação do usuário.", "requisitos funcionais e requisitos não funcionais."], "c": 0, "e": "Módulo = interface + implementação. Os clientes devem enxergar apenas a interface."}, {"n": 29, "t": "Princípios de Projeto I", "q": "Sobre a recomendação \"maximize a coesão, minimize o acoplamento\", analise as afirmativas:", "code": null, "items": ["I. O pior cenário é a combinação de baixa coesão com alto acoplamento.", "II. O objetivo é eliminar todo e qualquer acoplamento entre as classes.", "III. Deve-se minimizar principalmente o acoplamento ruim, como dependências por variáveis globais ou por interfaces instáveis."], "q2": "Está correto o que se afirma em:", "o": ["I, apenas.", "II, apenas.", "I e III, apenas.", "II e III, apenas.", "I, II e III."], "c": 2, "e": "I e III estão corretas. A II está errada: eliminar todo acoplamento não faz sentido, pois classes dependem naturalmente de serviços úteis."}, {"n": 30, "t": "Princípios de Projeto I", "q": "Duas classes, A e B, não têm nenhuma referência uma à outra no código. Mesmo assim, o histórico do repositório mostra que, sempre que B é modificada, A também precisa ser alterada. Esse tipo de acoplamento é chamado de:", "code": null, "items": null, "q2": null, "o": ["acoplamento evolutivo (ou lógico).", "coesão funcional.", "integridade conceitual.", "acoplamento estrutural.", "acoplamento de dados."], "c": 0, "e": "Acoplamento estrutural existe quando há referência explícita no código. Quando mudanças em B tendem a exigir mudanças em A sem referência explícita, o acoplamento é evolutivo (ou lógico)."}];
+const LETTERS = ["A", "B", "C", "D", "E"];
+const state = {}; // n -> índice escolhido
+const quiz = document.getElementById("quiz");
+
+function el(tag, cls, text) {
+  const e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text != null) e.textContent = text;
+  return e;
+}
+
+function render() {
+  quiz.innerHTML = "";
+  let lastTema = null;
+  QUESTIONS.forEach(q => {
+    if (q.t !== lastTema) {
+      lastTema = q.t;
+      const total = QUESTIONS.filter(x => x.t === q.t).length;
+      const h = el("h2", "section-title", q.t);
+      h.appendChild(el("small", null, total + (total === 1 ? " questão" : " questões")));
+      quiz.appendChild(h);
+    }
+    const card = el("article", "card");
+    card.id = "q" + q.n;
+    const meta = el("div", "q-meta");
+    meta.appendChild(el("span", "num", "Questão " + q.n));
+    meta.appendChild(el("span", "tag", q.t));
+    if (q.code) meta.appendChild(el("span", "tag code", "código"));
+    card.appendChild(meta);
+    card.appendChild(el("p", "q-text", q.q));
+    if (q.items) {
+      const box = el("div", "items");
+      q.items.forEach(s => box.appendChild(el("p", null, s)));
+      card.appendChild(box);
+    }
+    if (q.code) { const pre = el("pre"); pre.appendChild(el("code", null, q.code)); card.appendChild(pre); }
+    if (q.q2) card.appendChild(el("p", "q-text", q.q2));
+    const opts = el("div", "options");
+    q.o.forEach((txt, i) => {
+      const b = el("button", "option");
+      b.type = "button";
+      b.appendChild(el("span", "bubble", LETTERS[i]));
+      b.appendChild(el("span", null, txt));
+      b.addEventListener("click", () => answer(q, i, card));
+      opts.appendChild(b);
+    });
+    card.appendChild(opts);
+    const fb = el("div", "feedback hidden");
+    fb.setAttribute("aria-live", "polite");
+    card.appendChild(fb);
+    quiz.appendChild(card);
+    if (state[q.n] != null) paint(q, card);
+  });
+  update();
+}
+
+function answer(q, i, card) {
+  if (state[q.n] != null) return;
+  state[q.n] = i;
+  paint(q, card);
+  update();
+}
+
+function paint(q, card) {
+  const chosen = state[q.n];
+  card.querySelectorAll(".option").forEach((b, i) => {
+    b.disabled = true;
+    if (i === q.c) b.classList.add("correct");
+    else if (i === chosen) b.classList.add("incorrect");
+    else b.classList.add("dim");
+  });
+  const fb = card.querySelector(".feedback");
+  fb.innerHTML = "";
+  const ok = chosen === q.c;
+  const head = el("strong", ok ? "ok" : "no", ok ? "Correto! " : "Incorreto. ");
+  fb.appendChild(head);
+  fb.appendChild(document.createTextNode("A alternativa correta é a (" + LETTERS[q.c] + ")."));
+  fb.appendChild(el("p", null, q.e));
+  fb.classList.remove("hidden");
+}
+
+function update() {
+  const done = Object.keys(state).length;
+  const hits = QUESTIONS.filter(q => state[q.n] === q.c).length;
+  document.getElementById("done").textContent = done;
+  document.getElementById("hits").textContent = hits;
+  document.getElementById("miss").textContent = done - hits;
+  document.getElementById("bar").style.width = (done / QUESTIONS.length * 100) + "%";
+  const res = document.getElementById("result");
+  if (done === QUESTIONS.length) {
+    document.getElementById("score").innerHTML = hits + "<span>/" + QUESTIONS.length + "</span>";
+    const tb = document.getElementById("temas");
+    tb.innerHTML = "<tr><th>Tema</th><th style='text-align:right'>Acertos</th></tr>";
+    [...new Set(QUESTIONS.map(q => q.t))].forEach(t => {
+      const qs = QUESTIONS.filter(q => q.t === t);
+      const h = qs.filter(q => state[q.n] === q.c).length;
+      const tr = el("tr");
+      tr.appendChild(el("td", null, t));
+      tr.appendChild(el("td", "n", h + " / " + qs.length));
+      tb.appendChild(tr);
+    });
+    const qc = QUESTIONS.filter(q => q.code), hc = qc.filter(q => state[q.n] === q.c).length;
+    const tr = el("tr"); tr.appendChild(el("td", null, "Questões com código")); tr.appendChild(el("td", "n", hc + " / " + qc.length)); tb.appendChild(tr);
+    document.getElementById("redo-wrong").classList.toggle("hidden", hits === QUESTIONS.length);
+    res.classList.remove("hidden");
+  } else {
+    res.classList.add("hidden");
+  }
+}
+
+document.getElementById("reset").addEventListener("click", () => {
+  Object.keys(state).forEach(k => delete state[k]);
+  render();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+document.getElementById("redo-wrong").addEventListener("click", () => {
+  let first = null;
+  QUESTIONS.forEach(q => { if (state[q.n] !== q.c) { delete state[q.n]; if (first == null) first = q.n; } });
+  render();
+  if (first != null) document.getElementById("q" + first).scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+render();
+</script>
+</body>
+</html>

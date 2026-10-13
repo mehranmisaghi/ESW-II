@@ -42,10 +42,11 @@
   - [Produto Mínimo Viável](mvp.md)
   - [Testes A/B](testesab.md)
 
-[Análise e Projeto de Software (I) (15/09/2026 - 29/09/2026)](aps1.md)
+[Análise e Projeto de Software (I) (15/09/2026 - 13/10/2026)](aps1.md)
   - [UML](uml.md)
   - [Apresentação Diagramas UML](auml.md)
   - [Princípios de Projeto (I)](/projeto/pprojeto1.md)
+  - [Simulado da Prova](https://mehranmisaghi.github.io/ESW-II/materiais/simuladop1.html)
 
 ## Prova I (15/10/2026)
 

@@ -261,3 +261,6 @@ class Relatorio {
 **8.** *(Integrador — as quatro propriedades)* Um sistema de biblioteca tem uma classe `Sistema` com 2.000 linhas, que cadastra livros, cadastra usuários, calcula multas e envia e-mails. Os dados ficam em listas públicas e estáticas, acessadas por todas as telas. Metade dos métodos se chama `cadastra_livro`, `calcula_multa`; a outra metade, `enviarEmail`, `removerUsuario`. Identifique um problema para **cada uma** das quatro propriedades estudadas nesta série e proponha uma correção para cada um.
 
 ---
+# Que tal um simulado para prova?
+
+- [Simulado da prova](https://mehranmisaghi.github.io/ESW-II/materiais/simuladop1.html)
