@@ -77,7 +77,7 @@
   - Preparação de seminários
   - Apresentação de seminários
 
-## Visita (a definir)
+## Visita (Ágora HUB - 10/11)
  
 ---
 ![v](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-II.visitor-badge&left_text=Visitantes&format=true&logo=github)
