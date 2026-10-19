@@ -30,7 +30,5 @@ de Marco Tulio Valente, e trazem exemplos adicionais trabalhados em sala.
 
 ## Exercícios 
 
-Os exercícios estão divididos em duas partes:
-- [Parte I](/projeto/exercicios-parte-1.md)
-- [Parte II](/projeto/exercicios-parte-2.md)
+- Os exercícios estão divididos em duas partes e poderão ser encontrados em [Princípios de Projeto - Parte II - Exercícios](/projeto/pprojeto2x.md)
 

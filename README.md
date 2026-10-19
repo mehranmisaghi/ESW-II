@@ -52,8 +52,8 @@
 
 ## Análise e Projeto de Software II
 
-[Análise e Projeto de Software (II) (20/10/2026 - )](/projeto/aps2.md)
-  - Princípios do Projeto (II)
+[Análise e Projeto de Software (II) (20/10/2026 - )](/projeto/pprojeto2.md)
+  - [Princípios do Projeto (II)](/projeto/pprojeto2.md)
   - Arquitetura de Software
 
 ## Verificação, validação e testes de software
