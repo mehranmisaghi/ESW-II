@@ -1,11 +1,8 @@
 # 8. Métricas de código-fonte
 
 
-[← Substituição de Liskov](07-substituicao-de-liskov.md) · [Índice](README.md) · [Próximo: Síntese →](09-sintese.md)
 
----
-
-## Por que medir?
+## Por que devemos medir?
 
 As propriedades de projeto (coesão, acoplamento, complexidade) podem ser avaliadas de forma subjetiva, em revisões de
 código. Métricas oferecem uma avaliação **quantitativa** que ajuda a localizar classes problemáticas em sistemas
@@ -119,18 +116,5 @@ flowchart TD
     D3 -- não --> R4["C"]
 ```
 
----
-
-### Pontos-chave
-
-- Métricas apontam **onde olhar**; não são metas em si.
-- LCOM alto ⇒ baixa coesão; CBO alto ⇒ alto acoplamento; CC alta ⇒ método difícil de entender e testar.
-- Um código com CC = 1 não tem nenhum comando de decisão.
-
-### Para refletir
-
-- A complexidade ciclomática é independente de linguagem de programação? Por quê?
-
-**Exercícios relacionados:** [14](../exercicios-parte-2.md#exercício-14-calculando-métricas)
 
 [← Substituição de Liskov](07-substituicao-de-liskov.md) · [Índice](aps2.md) · [Próximo: Síntese →](09-sintese.md)

@@ -1,12 +1,6 @@
 # 9. Síntese e próximos passos
 
-📁 [`projeto`](../README.md) / [`notas-de-aula`](README.md) / `09-sintese.md`
-
-[← Métricas](08-metricas.md) · [Índice](README.md)
-
----
-
-## Os sete princípios em uma página
+## Os 7 Princípios de Projeto
 
 | Princípio | Ideia central | Propriedade | Sinal de alerta |
 |---|---|---|---|
@@ -47,7 +41,7 @@ pena aplicar um princípio:
 
 Se todas as respostas forem "não", a solução mais simples provavelmente é a melhor.
 
-## Checklist para revisão de código
+## Como revisar um código baseado em princípios de projeto?
 
 - [ ] Cada classe tem um único motivo para mudar?
 - [ ] Alguma interface obriga implementações a ter métodos vazios ou que lançam exceção?
@@ -57,16 +51,11 @@ Se todas as respostas forem "não", a solução mais simples provavelmente é a 
 - [ ] Adicionar um novo "tipo" exige editar `if/else` ou `switch` existentes?
 - [ ] Alguma subclasse muda o comportamento esperado pelos clientes da classe base?
 
-## Próximos passos
+## Vamos fazer alguns exercícios?
 
-- **Próxima aula:** Arquitetura de Software.
 - **Exercícios:** [Parte 1](/projeto/exercicios-parte-1.md) e [Parte 2](/projeto//exercicios-parte-2.md).
 - **Leitura recomendada:** [Engenharia de Software Moderna, Cap. 5](https://engsoftmoderna.info/cap5.html).
 
-## Referências
-
-- VALENTE, Marco Tulio. *Engenharia de Software Moderna*, Cap. 5: Princípios de Projeto. Disponível em: <https://engsoftmoderna.info/cap5.html>
-- MARTIN, Robert C. *Clean Architecture*. Prentice Hall, 2017.
-
+#
 
 [← Métricas](08-metricas.md) · [Índice](aps2.md)

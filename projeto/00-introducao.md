@@ -1,10 +1,5 @@
 # Propriedades X Princípios de Projeto
 
-
-[Índice](aps2.md) · [Próximo: Responsabilidade Única →](01-responsabilidade-unica.md)
-
----
-
 ## Por que precisamos de estudar princípios de projeto?
 
 Projetar software é decompor um problema grande em partes menores (classes, módulos, pacotes) que possam ser

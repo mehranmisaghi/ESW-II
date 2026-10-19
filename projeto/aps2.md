@@ -13,7 +13,7 @@ de Marco Tulio Valente, e trazem exemplos adicionais trabalhados em sala.
 
 | # | Página | Propriedade promovida |
 |---|---|---|
-| 0 | [Introdução: propriedades e princípios de projeto](00-introducao.md) | — |
+| 0 | [Proriedades x Princípios](00-introducao.md) | — |
 | 1 | [Responsabilidade Única](01-responsabilidade-unica.md) | Coesão |
 | 2 | [Segregação de Interfaces](02-segregacao-de-interfaces.md) | Coesão |
 | 3 | [Inversão de Dependências](03-inversao-de-dependencias.md) | Acoplamento |
