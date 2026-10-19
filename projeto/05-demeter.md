@@ -1,8 +1,6 @@
 # 5. Princípio de Demeter
 
-📁 [`projeto`](../README.md) / [`notas-de-aula`](README.md) / `05-demeter.md`
 
-[← Composição a Herança](04-composicao-a-heranca.md) · [Índice](README.md) · [Próximo: Aberto/Fechado →](06-aberto-fechado.md)
 
 **Propriedade promovida:** Ocultamento de Informação
 
@@ -136,4 +134,4 @@ Por que é aceitável? São **métodos da linguagem ou de sua API**. Cada chamad
 [4](../exercicios-parte-1.md#exercício-4-o-certificado-do-curso-de-extensão) e
 [13 (item a)](../exercicios-parte-2.md#exercício-13-qual-princípio-foi-violado)
 
-[← Composição a Herança](04-composicao-a-heranca.md) · [Índice](README.md) · [Próximo: Aberto/Fechado →](06-aberto-fechado.md)
+[← Composição a Herança](04-composicao-a-heranca.md) · [Índice](aps2.md) · [Próximo: Aberto/Fechado →](06-aberto-fechado.md)
