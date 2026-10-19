@@ -2,5 +2,9 @@
   - [UML](uml.md)
   - [Apresentação Diagramas UML](auml.md)
   - [Princípios de Projeto (I)](pprojeto1.md)
+
+#   Análise e Projeto de Software (II) (20/10/2026 - )
+  - Princípios do Projeto (II)
+  - Arquitetura de Software
   ---
 ## [Voltar](README.md)

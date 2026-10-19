@@ -52,7 +52,7 @@
 
 ## Análise e Projeto de Software II
 
-[Análise e Projeto de Software (II) (20/10/2026 - )](aps.md)
+[Análise e Projeto de Software (II) (20/10/2026 - )](aps2.md)
   - Princípios do Projeto (II)
   - Arquitetura de Software
 
