@@ -21,7 +21,7 @@ flowchart LR
     SRP["1. Responsabilidade Única"] --> COE(["Coesão"])
     ISP["2. Segregação de Interfaces"] --> COE
     DIP["3. Inversão de Dependências"] --> ACO(["Acoplamento"])
-    CMP["4. Prefira Composição a Herança"] --> ACO
+    CMP["4. Composição ou Herança"] --> ACO
     DEM["5. Demeter"] --> OCU(["Ocultamento de Informação"])
     OCP["6. Aberto/Fechado"] --> EXT(["Extensibilidade"])
     LSP["7. Substituição de Liskov"] --> EXT

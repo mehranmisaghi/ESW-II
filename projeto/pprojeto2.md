@@ -17,7 +17,7 @@ de Marco Tulio Valente, e trazem exemplos adicionais trabalhados em sala.
 | 1 | [Responsabilidade Única](01-responsabilidade-unica.md) | Coesão |
 | 2 | [Segregação de Interfaces](02-segregacao-de-interfaces.md) | Coesão |
 | 3 | [Inversão de Dependências](03-inversao-de-dependencias.md) | Acoplamento |
-| 4 | [Prefira Composição a Herança](04-composicao-a-heranca.md) | Acoplamento |
+| 4 | [Composição ou Herança?](04-composicao-ou-heranca.md) | Acoplamento |
 | 5 | [Demeter](05-demeter.md) | Ocultamento de Informação |
 | 6 | [Aberto/Fechado](06-aberto-fechado.md) | Extensibilidade |
 | 7 | [Substituição de Liskov](07-substituicao-de-liskov.md) | Extensibilidade |
