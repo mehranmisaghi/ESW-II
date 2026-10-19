@@ -1,12 +1,11 @@
 # 0. Introdução: propriedades e princípios de projeto
 
-📁 [`projeto`](../README.md) / [`notas-de-aula`](README.md) / `00-introducao.md`
 
 [Índice](aps2.md) · [Próximo: Responsabilidade Única →](01-responsabilidade-unica.md)
 
 ---
 
-## Por que estudar princípios de projeto?
+## Por que precisamos de estudar princípios de projeto?
 
 Projetar software é decompor um problema grande em partes menores (classes, módulos, pacotes) que possam ser
 implementadas, testadas e modificadas com o menor esforço possível. O desafio é que **sistemas mudam o tempo todo**:
@@ -16,16 +15,15 @@ novos requisitos chegam, tecnologias são trocadas, regras de negócio evoluem. 
 Na Parte I estudamos as **propriedades** que caracterizam um bom projeto. Nesta aula estudamos os **princípios**:
 recomendações concretas que, quando seguidas, levam a essas propriedades.
 
-## Relembrando: propriedades de projeto
+## Antes, vamos relembrar: propriedades de projeto
 
-| Propriedade | Ideia | Origem |
-|---|---|---|
-| **Integridade conceitual** | O sistema oferece um conjunto coerente de ideias e padrões, evitando funcionalidades e convenções desconexas. | Frederick Brooks |
-| **Ocultamento de informação** | Cada classe esconde as decisões sujeitas a mudança atrás de uma interface estável. | David Parnas |
-| **Coesão** | Cada classe implementa um único serviço ou interesse (separação de interesses). | — |
-| **Acoplamento** | Força da conexão entre classes. A meta é **minimizar**, não eliminar, o acoplamento. | — |
+| Propriedade | Ideia 
+|---|---|
+| **Integridade conceitual** | O sistema oferece um conjunto coerente de ideias e padrões, evitando funcionalidades e convenções desconexas. 
+| **Ocultamento de informação** | Cada classe esconde as decisões sujeitas a mudança atrás de uma interface estável. 
+| **Coesão** | Cada classe implementa um único serviço ou interesse (separação de interesses). 
+| **Acoplamento** | Força da conexão entre classes. A meta é **minimizar**, não eliminar, o acoplamento. 
 
-> **Regra de ouro:** maximize a coesão e minimize o acoplamento.
 
 Lembre-se também da distinção entre tipos de acoplamento:
 
@@ -74,10 +72,5 @@ A esses cinco somamos mais dois: **Prefira Composição a Herança** e **Demeter
 
 ---
 
-### Pontos-chave
-
-- Propriedades descrevem **o que** queremos (coesão, baixo acoplamento, ocultamento, extensibilidade).
-- Princípios dizem **como** chegar lá.
-- SOLID é um subconjunto dos princípios que vamos estudar.
 
 [Índice](aps2.md) · [Próximo: Responsabilidade Única →](01-responsabilidade-unica.md)

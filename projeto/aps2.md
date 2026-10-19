@@ -1,4 +1,4 @@
-# Notas de Aula: Princípios de Projeto (Parte II)
+# Princípios de Projeto (Parte II)
 
 > Material gerado com auxílio de IA e revisado.
 
@@ -7,9 +7,9 @@
 
 >Estas notas acompanham a aula **Princípios de Projeto – Parte II**. Elas se baseiam no
 [Capítulo 5 do livro *Engenharia de Software Moderna*](https://engsoftmoderna.info/cap5.html),
-de Marco Tulio Valente, e trazem exemplos adicionais trabalhados em sala.
+de Marco Tulio Valente, e trazem exemplos adicionais trabalhados em sala. 
 
-## Notas da aula de forma detalhada
+## Notas da Aula
 
 | # | Página | Propriedade promovida |
 |---|---|---|
@@ -23,4 +23,14 @@ de Marco Tulio Valente, e trazem exemplos adicionais trabalhados em sala.
 | 7 | [Substituição de Liskov](07-substituicao-de-liskov.md) | Extensibilidade |
 | 8 | [Métricas de código-fonte](08-metricas.md) | — |
 | 9 | [Síntese e próximos passos](09-sintese.md) | — |
+
+
+## Slides de aula
+- [Slides de Princípios de Projeto - Parte II](https://canva.link/ox0y1qonetj2xx0)
+
+## Exercícios 
+
+Os exercícios estão divididos em duas partes:
+- [Parte I](/projeto/exercicios-parte-1.md)
+- [Parte II](/projeto/exercicios-parte-2.md)
 
