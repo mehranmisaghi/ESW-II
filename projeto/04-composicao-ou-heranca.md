@@ -1,4 +1,4 @@
-# 4. omposição ou Herança
+# 4. Composição ou Herança
 
 
 [← Inversão de Dependências](03-inversao-de-dependencias.md) · [Índice](aps2.md) · [Próximo: Demeter →](05-demeter.md)
