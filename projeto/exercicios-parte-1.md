@@ -1,6 +1,5 @@
 # Exercícios sobre Princípios de Projeto: Parte 1 (1 a 8)
 
-[← Voltar ao índice](README.md) · [Parte 2 →](exercicios-parte-2.md) 
 
 ---
 
