@@ -238,7 +238,6 @@ classDiagram
 3. Esboce o diagrama de classes da sua solução.
 4. Em que contexto essa refatoração seria *overengineering*?
 
-> 💡 Sugestão: trabalhe em duplas e compare as soluções.
 
 ---
 

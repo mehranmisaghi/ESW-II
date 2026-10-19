@@ -10,7 +10,6 @@ Material de apoio da aula **Princípios de Projeto – Parte II**, baseado no
 
 | Página | Descrição |
 |---|---|
-| [Resumo dos princípios](resumo.md) | Os 7 princípios, a propriedade que cada um promove e sinais de alerta |
 | [Exercícios 1 a 8](exercicios-parte-1.md) | Exercícios trabalhados em sala (do livro)|
 | [Exercícios 9 a 15](exercicios-parte-2.md) | Exercícios complementares|
 
