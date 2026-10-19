@@ -69,4 +69,4 @@ Se todas as respostas forem "não", a solução mais simples provavelmente é a 
 - MARTIN, Robert C. *Clean Architecture*. Prentice Hall, 2017.
 
 
-[← Métricas](08-metricas.md) · [Índice](README.md)
+[← Métricas](08-metricas.md) · [Índice](aps2.md)
