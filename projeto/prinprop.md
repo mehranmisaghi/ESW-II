@@ -61,9 +61,7 @@ a partir de uma sugestão de Michael Feathers:
 
 A esses cinco somamos mais dois: **Prefira Composição a Herança** e **Demeter**.
 
-> ⚠️ **Princípios são recomendações, não leis.** Aplicá-los sem necessidade gera *overengineering*:
-> soluções mais complexas do que o problema exige. Ao longo das notas, aponto situações em que cada princípio
-> pode ser relaxado.
+> ⚠️ **Importante destacar que os Princípios de Projeto são recomendações e não leis.** Aplicá-los sem necessidade implica em geração de soluções mais complexas que o problema exige e isto pode afetar desempenho do sistema/app em questão.
 
 ---
 
