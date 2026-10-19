@@ -1,8 +1,7 @@
 # 7. Princípio de Substituição de Liskov
 
-📁 [`projeto`](../README.md) / [`notas-de-aula`](README.md) / `07-substituicao-de-liskov.md`
 
-[← Aberto/Fechado](06-aberto-fechado.md) · [Índice](README.md) · [Próximo: Métricas →](08-metricas.md)
+[← Aberto/Fechado](06-aberto-fechado.md) · [Índice](aps2.md) · [Próximo: Métricas →](08-metricas.md)
 
 **Propriedade promovida:** Extensibilidade
 
@@ -156,4 +155,4 @@ implícito de `Retangulo`: alterar a altura não deveria alterar a largura.
 [10](../exercicios-parte-2.md#exercício-10-aves-que-não-voam) e
 [13 (item c)](../exercicios-parte-2.md#exercício-13-qual-princípio-foi-violado)
 
-[← Aberto/Fechado](06-aberto-fechado.md) · [Índice](README.md) · [Próximo: Métricas →](08-metricas.md)
+[← Aberto/Fechado](06-aberto-fechado.md) · [Índice](aps2.md) · [Próximo: Métricas →](08-metricas.md)

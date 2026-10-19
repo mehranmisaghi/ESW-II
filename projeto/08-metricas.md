@@ -1,6 +1,5 @@
 # 8. Métricas de código-fonte
 
-📁 [`projeto`](../README.md) / [`notas-de-aula`](README.md) / `08-metricas.md`
 
 [← Substituição de Liskov](07-substituicao-de-liskov.md) · [Índice](README.md) · [Próximo: Síntese →](09-sintese.md)
 
@@ -134,4 +133,4 @@ flowchart TD
 
 **Exercícios relacionados:** [14](../exercicios-parte-2.md#exercício-14-calculando-métricas)
 
-[← Substituição de Liskov](07-substituicao-de-liskov.md) · [Índice](README.md) · [Próximo: Síntese →](09-sintese.md)
+[← Substituição de Liskov](07-substituicao-de-liskov.md) · [Índice](aps2.md) · [Próximo: Síntese →](09-sintese.md)

@@ -1,8 +1,7 @@
 # 6. Princípio Aberto/Fechado
 
-📁 [`projeto`](../README.md) / [`notas-de-aula`](README.md) / `06-aberto-fechado.md`
 
-[← Demeter](05-demeter.md) · [Índice](README.md) · [Próximo: Substituição de Liskov →](07-substituicao-de-liskov.md)
+[← Demeter](05-demeter.md) · [Índice](aps2.md) · [Próximo: Substituição de Liskov →](07-substituicao-de-liskov.md)
 
 **Propriedade promovida:** Extensibilidade
 
@@ -150,4 +149,4 @@ Concentre-se nos aspectos que têm **maior probabilidade de variar**.
 [13 (item b)](../exercicios-parte-2.md#exercício-13-qual-princípio-foi-violado) e
 [15](../exercicios-parte-2.md#exercício-15-desafio-integrador-notificações)
 
-[← Demeter](05-demeter.md) · [Índice](README.md) · [Próximo: Substituição de Liskov →](07-substituicao-de-liskov.md)
+[← Demeter](05-demeter.md) · [Índice](aps2.md) · [Próximo: Substituição de Liskov →](07-substituicao-de-liskov.md)
