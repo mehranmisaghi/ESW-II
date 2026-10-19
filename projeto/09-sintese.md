@@ -60,7 +60,7 @@ Se todas as respostas forem "não", a solução mais simples provavelmente é a 
 ## Próximos passos
 
 - **Próxima aula:** Arquitetura de Software.
-- **Exercícios:** [Parte 1](../exercicios-parte-1.md) e [Parte 2](../exercicios-parte-2.md).
+- **Exercícios:** [Parte 1](/projeto/exercicios-parte-1.md) e [Parte 2](/projeto//exercicios-parte-2.md).
 - **Leitura recomendada:** [Engenharia de Software Moderna, Cap. 5](https://engsoftmoderna.info/cap5.html).
 
 ## Referências
