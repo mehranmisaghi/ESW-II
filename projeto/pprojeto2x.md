@@ -32,12 +32,6 @@ flowchart LR
 
 > **Princípio** = recomendação mais explícita · **Propriedade** = consequência (o que ganhamos seguindo o princípio)
 
-## Para que você consiga responder melhor os exercícios
-
-1. Leia o [resumo](resumo.md) para revisar os conceitos.
-2. Resolva os exercícios no seu caderno ou em um repositório próprio.
-
-
 ## Referências
 
 - VALENTE, Marco Tulio. *Engenharia de Software Moderna*, [Cap. 5](https://engsoftmoderna.info/)
