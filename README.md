@@ -42,7 +42,7 @@
   - [Produto Mínimo Viável](mvp.md)
   - [Testes A/B](testesab.md)
 
-[Análise e Projeto de Software (I) (15/09/2026 - 13/10/2026)](aps.md)
+[Análise e Projeto de Software (I) (15/09/2026 - 13/10/2026)](/projeto/aps.md)
   - [UML](uml.md)
   - [Apresentação Diagramas UML](auml.md)
   - [Princípios de Projeto (I)](/projeto/pprojeto1.md)
@@ -64,7 +64,7 @@
 
 ## Aplicações da Engenharia de Software
 
-[Aplicações da Engenharia de Software (10/11/2026 - 10/11/2026)](aps.md)
+[Aplicações da Engenharia de Software (10/11/2026 - 10/11/2026)](aes.md)
   - Aplicações
   - Engenharia de Software voltado para Negócio
 
