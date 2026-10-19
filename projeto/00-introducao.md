@@ -1,4 +1,4 @@
-# 0. Introdução: propriedades e princípios de projeto
+# Propriedades X Princípios de Projeto
 
 
 [Índice](aps2.md) · [Próximo: Responsabilidade Única →](01-responsabilidade-unica.md)
