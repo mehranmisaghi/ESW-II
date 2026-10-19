@@ -243,4 +243,4 @@ classDiagram
 
 ---
 
-[← Parte 1](exercicios-parte-1.md) · [Voltar ao índice](README.md) · [Gabarito →](gabarito.md)
+[← Parte 1](exercicios-parte-1.md) · [Voltar ao índice](aps2.md) 
