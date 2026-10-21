@@ -28,7 +28,7 @@ de Marco Tulio Valente, e trazem exemplos adicionais trabalhados em sala.
 ## Slides de aula
 - [Slides de Princípios de Projeto - Parte II](https://canva.link/ox0y1qonetj2xx0)
 
-## Exercícios 
+## Exercícios (poderão ser feitos e serão aprsentados no dia 27)
 
 - Os exercícios estão divididos em duas partes e poderão ser encontrados em [Princípios de Projeto - Parte II - Exercícios](/projeto/pprojeto2x.md)
 
