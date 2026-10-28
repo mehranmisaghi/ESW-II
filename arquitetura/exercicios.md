@@ -5,7 +5,6 @@
 
 > **Nesta série:** [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · **Exercícios**
 
-Resolva os exercícios antes de consultar o [gabarito](gabarito.md). Ao lado de cada bloco está a página das notas que trata do assunto.
 
 ---
 
@@ -74,4 +73,3 @@ Resolva os exercícios antes de consultar o [gabarito](gabarito.md). Ao lado de 
 
 ---
 
-**Respostas sugeridas:** [gabarito](gabarito.md)
