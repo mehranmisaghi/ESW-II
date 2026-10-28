@@ -4,7 +4,7 @@
 **Professor:** Mehran Misaghi · IFC Campus Araquari
 **Série:** Arquitetura de Software, página 3 de 6
 
-> **Nesta série:** [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · **3. MVC** · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
+> [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · **3. MVC** · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
 
 ---
 
@@ -18,7 +18,6 @@
 6. [Exemplo em React](#6-exemplo-em-react)
 7. [Exemplo em Vue.js](#7-exemplo-em-vuejs)
 8. [Resumo: três sabores de MVC](#8-resumo-três-sabores-de-mvc)
-9. [Pontos-chave para revisão](#9-pontos-chave-para-revisão)
 10. [Material para estudar](#10-material-para-estudar)
 
 ---
@@ -310,22 +309,9 @@ A ideia de ligar modelo e visão continua a mesma.
 
 ---
 
-## 9. Pontos-chave para revisão
-
-- MVC separa **Visão**, **Controlador** e **Modelo**; o Modelo não depende dos outros dois.
-- Vantagens: **especialização**, **reúso** (várias visões para um modelo) e **testabilidade**.
-- O MVC clássico era para desktop; no MVC Web, o controlador trata **requisições HTTP**.
-- SPAs carregam o código uma vez e trocam só dados com o servidor, de forma **assíncrona**.
-- React e Vue atualizam a visão automaticamente quando o estado (modelo) muda.
-
----
-
-## 10. Material para estudar
+## 9. Material para estudar
 
 - [Engenharia de Software Moderna, cap. 7, seção 7.3 (MVC)](https://engsoftmoderna.info/cap7.html)
-- [React: Quick Start](https://react.dev/learn)
-- [Vue.js: Introduction](https://vuejs.org/guide/introduction.html)
-- KRASNER, G.; POPE, S. *A cookbook for using the model-view controller user interface paradigm in Smalltalk-80*, 1988 (citado no livro)
 
 ---
 

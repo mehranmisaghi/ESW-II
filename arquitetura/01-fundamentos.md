@@ -4,7 +4,7 @@
 **Professor:** Mehran Misaghi · IFC Campus Araquari
 
 
-> **Nesta série:** **1. Fundamentos** · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
+> **1. Fundamentos** · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
 
 > As notas de ual foram criadas com auxílio de IA e revisadas pelo professor.
 ---
@@ -15,8 +15,7 @@
 2. [Duas definições de arquitetura](#2-duas-definições-de-arquitetura)
 3. [Padrões arquiteturais](#3-padrões-arquiteturais)
 4. [O debate Tanenbaum × Torvalds](#4-o-debate-tanenbaum--torvalds)
-5. [Pontos-chave para revisão](#5-pontos-chave-para-revisão)
-6. [Material para estudar](#6-material-para-estudar)
+5. [Material para estudar](#6-material-para-estudar)
 
 ---
 
@@ -102,19 +101,9 @@ Um episódio histórico mostra como decisões arquiteturais demoram para mostrar
 
 ---
 
-## 5. Pontos-chave para revisão
-
-- Arquitetura trata das **unidades grandes** (pacotes, camadas, serviços) e das **decisões difíceis de reverter**.
-- O que é arquitetural depende dos **objetivos do sistema**.
-- Padrões arquiteturais definem os módulos principais e as **dependências permitidas** entre eles.
-- O debate Tanenbaum × Torvalds mostra que o custo de uma decisão arquitetural pode aparecer **muito depois**.
-
----
-
-## 6. Material para estudar
+## 5. Material para estudar
 
 - [Engenharia de Software Moderna, cap. 7, seção 7.1 (Introdução)](https://engsoftmoderna.info/cap7.html)
-- FOWLER, M. *Who Needs an Architect?* IEEE Software, 2003 (citado no livro)
 
 ---
 

@@ -2,9 +2,8 @@
 
 **Disciplina:** Engenharia de Software II
 **Professor:** Mehran Misaghi · IFC Campus Araquari
-**Série:** Arquitetura de Software, página 6 de 6
 
-> **Nesta série:** [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · **6. Anti-padrões e evolução** · [Exercícios](exercicios.md)
+> [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · **6. Anti-padrões e evolução** · [Exercícios](exercicios.md)
 
 ---
 
@@ -17,8 +16,7 @@
 5. [Do monolito aos microsserviços: Strangler Fig](#5-do-monolito-aos-microsserviços-strangler-fig)
 6. [Extraindo um serviço do legado](#6-extraindo-um-serviço-do-legado)
 7. [Como escolher um padrão?](#7-como-escolher-um-padrão)
-8. [Pontos-chave para revisão](#8-pontos-chave-para-revisão)
-9. [Material para estudar](#9-material-para-estudar)
+8. [Material para estudar](#9-material-para-estudar)
 
 ---
 
@@ -201,22 +199,11 @@ flowchart TD
 
 ---
 
-## 8. Pontos-chave para revisão
-
-- **Big ball of mud:** sem arquitetura, só dependências por toda parte.
-- O caso do sistema bancário mostra que o problema arquitetural não se resolve só com processo.
-- Dívida técnica tem **principal** e **juros**; a arquitetural é a mais comum e a mais cara.
-- **Strangler Fig:** migrar aos poucos, extraindo serviços, em vez de um big bang.
-- Extrair um serviço exige decidir sobre código, limites, preparo do legado, comunicação e dados.
-
----
-
-## 9. Material para estudar
+## 8. Material para estudar
 
 - [Engenharia de Software Moderna, cap. 7, seção 7.8 (Anti-padrões)](https://engsoftmoderna.info/cap7.html)
 - [Manutenção de Software, cap. 7: Dívida Técnica](https://manutencaosoftware.org/cap7.html)
 - [Manutenção de Software, cap. 8: Sistemas Legados](https://manutencaosoftware.org/cap8.html)
-- FOWLER, M. [Strangler Fig Application](https://martinfowler.com/bliki/StranglerFigApplication.html)
 
 ---
 

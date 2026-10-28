@@ -4,7 +4,7 @@
 **Professor:** Mehran Misaghi · IFC Campus Araquari
 **Série:** Arquitetura de Software, página 2 de 6
 
-> **Nesta série:** [1. Fundamentos](01-fundamentos.md) · **2. Camadas** · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
+> ** [1. Fundamentos](01-fundamentos.md) · **2. Camadas** · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
 
 ---
 
@@ -14,8 +14,7 @@
 2. [Por que usar camadas?](#2-por-que-usar-camadas)
 3. [Arquitetura em três camadas](#3-arquitetura-em-três-camadas)
 4. [Arquitetura em duas camadas](#4-arquitetura-em-duas-camadas)
-5. [Pontos-chave para revisão](#5-pontos-chave-para-revisão)
-6. [Material para estudar](#6-material-para-estudar)
+5. [Material para estudar](#6-material-para-estudar)
 
 ---
 
@@ -106,19 +105,11 @@ A camada de aplicação pode ter uma **fachada** (ponto único de entrada para a
 
 ---
 
-## 5. Pontos-chave para revisão
 
-- Em camadas, a camada **n** só usa a camada **n − 1**.
-- Camadas quebram a complexidade e facilitam o entendimento, a troca e o reúso.
-- Três camadas: **interface**, **lógica de negócio** e **banco de dados**, normalmente em máquinas diferentes.
-- Duas camadas: interface e lógica no cliente; mais simples, mas o cliente faz todo o processamento.
-
----
-
-## 6. Material para estudar
+## 5. Material para estudar
 
 - [Engenharia de Software Moderna, cap. 7, seção 7.2 (Arquitetura em Camadas)](https://engsoftmoderna.info/cap7.html)
-- FOWLER, M. *Patterns of Enterprise Application Architecture*, 2002 (citado no livro)
+
 
 ---
 

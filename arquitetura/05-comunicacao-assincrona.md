@@ -4,7 +4,7 @@
 **Professor:** Mehran Misaghi · IFC Campus Araquari
 **Série:** Arquitetura de Software, página 5 de 6
 
-> **Nesta série:** [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · **5. Comunicação assíncrona** · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
+> [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · **5. Comunicação assíncrona** · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
 
 ---
 
@@ -16,8 +16,7 @@
 4. [Publish/Subscribe](#4-publishsubscribe)
 5. [Filas × Publish/Subscribe](#5-filas--publishsubscribe)
 6. [Outros padrões arquiteturais](#6-outros-padrões-arquiteturais)
-7. [Pontos-chave para revisão](#7-pontos-chave-para-revisão)
-8. [Material para estudar](#8-material-para-estudar)
+7. [Material para estudar](#7-material-para-estudar)
 
 ---
 
@@ -177,20 +176,9 @@ flowchart LR
 
 ---
 
-## 7. Pontos-chave para revisão
-
-- Filas: produtores inserem, consumidores retiram; comunicação **assíncrona** e **FIFO**.
-- **Desacoplamento no espaço** (não se conhecem) e **no tempo** (não precisam estar no ar juntos).
-- Pub/sub: eventos, **comunicação em grupo**, notificação **push** e **tópicos**.
-- Use filas para **distribuir tarefas** e pub/sub para **avisar vários interessados**.
-- Outros padrões: pipes e filtros, cliente/servidor e peer-to-peer.
-
----
-
-## 8. Material para estudar
+## 7. Material para estudar
 
 - [Engenharia de Software Moderna, cap. 7, seções 7.5 a 7.7](https://engsoftmoderna.info/cap7.html)
-- EUGSTER, P. et al. *The many faces of publish/subscribe*, ACM Computing Surveys, 2003 (citado no livro)
 
 ---
 

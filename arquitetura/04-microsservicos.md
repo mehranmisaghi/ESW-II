@@ -4,7 +4,7 @@
 **Professor:** Mehran Misaghi · IFC Campus Araquari
 **Série:** Arquitetura de Software, página 4 de 6
 
-> **Nesta série:** [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · **4. Microsserviços** · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
+> [1. Fundamentos](01-fundamentos.md) · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · **4. Microsserviços** · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
 
 ---
 
@@ -16,8 +16,7 @@
 4. [Lei de Conway](#4-lei-de-conway)
 5. [Cada serviço cuida dos seus dados](#5-cada-serviço-cuida-dos-seus-dados)
 6. [Quando não usar microsserviços](#6-quando-não-usar-microsserviços)
-7. [Pontos-chave para revisão](#7-pontos-chave-para-revisão)
-8. [Material para estudar](#8-material-para-estudar)
+7. [Material para estudar](#7-material-para-estudar)
 
 ---
 
@@ -139,22 +138,11 @@ Esse tipo de coordenação pode exigir protocolos como o **two-phase commit**.
 
 ---
 
-## 7. Pontos-chave para revisão
 
-- No monolito, uma mudança pode quebrar módulos vizinhos, o que torna os releases lentos.
-- Microsserviços são **processos independentes**, sem memória compartilhada, mantidos por times pequenos.
-- Vantagens: evolução independente, escalabilidade sob medida, heterogeneidade e falhas parciais.
-- **Lei de Conway:** a arquitetura espelha a comunicação da organização.
-- Cada serviço deve ter **seus próprios dados**.
-- Custos: complexidade, latência e transações distribuídas.
-
----
-
-## 8. Material para estudar
+## 7. Material para estudar
 
 - [Engenharia de Software Moderna, cap. 7, seção 7.4 (Microsserviços)](https://engsoftmoderna.info/cap7.html)
-- LEWIS, J.; FOWLER, M. [Microservices](https://martinfowler.com/articles/microservices.html), 2014
-- CONWAY, M. [How Do Committees Invent?](https://www.melconway.com/Home/Committees_Paper.html), 1968
+
 
 ---
 
