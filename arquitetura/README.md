@@ -49,7 +49,7 @@ flowchart LR
 
 ## Como usar
 
-1. Leia as notas na ordem: cada página termina com **pontos-chave para revisão** e um link para a próxima.
+1. Leia as notas na ordem.
 2. Resolva os [exercícios](exercicios.md) propostos.
 4. Para poder estudar melhor, use os links da seção **Material para estudar** de cada página.
 
