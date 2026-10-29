@@ -6,7 +6,7 @@
 
 > **1. Fundamentos** · [2. Camadas](02-camadas.md) · [3. MVC](03-mvc.md) · [4. Microsserviços](04-microsservicos.md) · [5. Comunicação assíncrona](05-comunicacao-assincrona.md) · [6. Anti-padrões e evolução](06-antipadroes-e-evolucao.md) · [Exercícios](exercicios.md)
 
-> As notas de ual foram criadas com auxílio de IA e revisadas pelo professor.
+> As notas de aula foram criadas com auxílio de IA e revisadas pelo professor.
 ---
 
 ## Sumário
