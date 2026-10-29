@@ -4,10 +4,10 @@
 **Professor:** Mehran Misaghi 
 
 Material de apoio da aula **Arquitetura de Software**, baseado no
-[Capítulo 7 do livro *Engenharia de Software Moderna*](https://engsoftmoderna.info/cap7.html)
+[Capítulo 7 do livro *Engenharia de Software Moderna (2021)*](https://engsoftmoderna.info/cap7.html)
 e nos capítulos [7 (Dívida Técnica)](https://manutencaosoftware.org/cap7.html) e
 [8 (Sistemas Legados)](https://manutencaosoftware.org/cap8.html) do livro
-[*Manutenção de Software*](https://manutencaosoftware.org/), ambos do Prof. Marco Tulio Valente.
+[*Manutenção de Software (2026)*](https://manutencaosoftware.org/), ambos do Prof. Marco Tulio Valente.
 
 >Este material foi elaborado com auxilío de IA e revisado por professor.
 
@@ -55,7 +55,7 @@ flowchart LR
 
 ## Slides da Aula e Referências
 
-- [Slides da aula]()
+- [Slides da aula](https://canva.link/8nu9yqqlk42dv45)
 - VALENTE, M. T. *Engenharia de Software Moderna*. [Cap. 7: Arquitetura](https://engsoftmoderna.info/cap7.html), 2021
 - VALENTE, M. T. *Manutenção de Software*. [Cap. 7: Dívida Técnica](https://manutencaosoftware.org/cap7.html) · [Cap. 8: Sistemas Legados](https://manutencaosoftware.org/cap8.html), 2026
 
