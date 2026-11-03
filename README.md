@@ -75,9 +75,9 @@
 ## Seminários
 
 [Seminários (26/11/2026 - 10/12/2026)](seminarios.md)
-  - Definição e detalhamento de temas
-  - Preparação de seminários
-  - Apresentação de seminários
+  - Definição e detalhamento de temas (26/11/2026)
+  - Preparação de seminários (26/11 e 01/12)
+  - Apresentação de seminários (03/12 e 10/12)
  
 ---
 ![v](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-II.visitor-badge&left_text=Visitantes&format=true&logo=github)
