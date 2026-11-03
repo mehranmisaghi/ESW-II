@@ -66,7 +66,7 @@
 
 ## Aplicações da Engenharia de Software
 
-[Aplicações da Engenharia de Software (10/11/2026 - 10/11/2026)](aes.md)
+[Aplicações da Engenharia de Software (19/11/2026 - 19/11/2026)](aes.md)
   - Aplicações
   - Engenharia de Software voltado para Negócio
 
