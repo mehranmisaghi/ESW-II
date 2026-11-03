@@ -74,7 +74,7 @@
 
 ## Seminários
 
-[Seminários (17/11/2026 - 10/12/2026)](seminarios.md)
+[Seminários (26/11/2026 - 10/12/2026)](seminarios.md)
   - Definição e detalhamento de temas
   - Preparação de seminários
   - Apresentação de seminários
