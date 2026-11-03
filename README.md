@@ -52,15 +52,17 @@
 
 ## Análise e Projeto de Software II
 
-[Análise e Projeto de Software (II) (20/10/2026 - )](/projeto/pprojeto2.md)
+[Análise e Projeto de Software (II) (20/10/2026 - 05/11/2026)](/projeto/pprojeto2.md)
   - [Princípios do Projeto (II)](/projeto/pprojeto2.md)
   - [Arquitetura de Software](/arquitetura/README.md)
 
 ## Verificação, validação e testes de software
 
-[Verificação, validação e testes de software. (20/10/2026 - 05/11/2026)](vvt.md)
+[Verificação, validação e testes de software. (12/11/2026 - )](vvt.md)
   - Testes
   - Refatoração
+
+## Visita (Ágora HUB - 17/11)
 
 ## Aplicações da Engenharia de Software
 
@@ -68,7 +70,7 @@
   - Aplicações
   - Engenharia de Software voltado para Negócio
 
-## Prova II (12/11/2026)
+## Prova II (24/11/2026) (nova data)
 
 ## Seminários
 
@@ -76,8 +78,6 @@
   - Definição e detalhamento de temas
   - Preparação de seminários
   - Apresentação de seminários
-
-## Visita (Ágora HUB - 17/11)
  
 ---
 ![v](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-II.visitor-badge&left_text=Visitantes&format=true&logo=github)
