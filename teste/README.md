@@ -1,4 +1,3 @@
-<img src="figuras/logo_ifc_araquari.png" alt="IFC Campus Araquari" width="220">
 
 # Testes de Software - Notas da Aula
 
