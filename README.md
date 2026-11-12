@@ -59,7 +59,7 @@
 ## Verificação, validação e testes de software
 
 [Verificação, validação e testes de software. (12/11/2026 - )](vvt.md)
-  - Testes
+  - [Testes](/teste/README.md)
   - Refatoração
 
 ## Visita (Ágora HUB - 17/11)
