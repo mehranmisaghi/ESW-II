@@ -58,7 +58,7 @@
 
 ## Verificação, validação e testes de software
 
-[Verificação, validação e testes de software. (12/11/2026 - )](vvt.md)
+[Verificação, validação e testes de software. (12/11/2026 - 24/11 )](vvt.md)
   - [Testes](/teste/README.md)
   - Refatoração
 
@@ -70,14 +70,14 @@
   - Aplicações
   - Engenharia de Software voltado para Negócio
 
-## Prova II (24/11/2026) (nova data)
+## Prova II (01/12/2026) (nova data)
 
 ## Seminários
 
-[Seminários (26/11/2026 - 10/12/2026)](seminarios.md)
-  - Definição e detalhamento de temas (26/11/2026)
-  - Preparação de seminários (10/11, 26/11 e 01/12)
-  - Apresentação de seminários (03/12 e 10/12)
+[Seminários (03/12/2026 - 10/12/2026)](seminarios.md)
+  - Definição e detalhamento de temas (03/12/2026)
+  - Preparação de seminários (03/12)
+  - Apresentação de seminários (08/12 e 10/12)
  
 ---
 ![v](https://visitor-badge.laobi.icu/badge?page_id=mehranmisaghi/ESW-II.visitor-badge&left_text=Visitantes&format=true&logo=github)
