@@ -58,7 +58,7 @@
 
 ## Verificação, validação e testes de software
 
-[Verificação, validação e testes de software. (12/11/2026 - 24/11 )](vvt.md)
+[Testes e refatoração. (12/11/2026 - 24/11 )](vvt.md)
   - [Testes](/teste/README.md)
   - Refatoração
 
