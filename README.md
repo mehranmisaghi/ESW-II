@@ -60,7 +60,7 @@
 
 [Testes e refatoração. (12/11/2026 - 24/11 )](vvt.md)
   - [Testes](/teste/README.md)
-  - Refatoração
+  - [Refatoração](/refactoring/README.md)
 
 ## Visita (Ágora HUB - 17/11)
 
