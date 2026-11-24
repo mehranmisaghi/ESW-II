@@ -14,8 +14,6 @@
 2. [Quando refatorar?](#2-quando-refatorar)
 3. [Refactorings automatizados](#3-refactorings-automatizados)
 4. [Remoção de código morto em escala](#4-remoção-de-código-morto-em-escala)
-5. [Pontos-chave para revisão](#5-pontos-chave-para-revisão)
-6. [Material para estudar](#6-material-para-estudar)
 
 ---
 
@@ -149,25 +147,6 @@ flowchart LR
 Código morto é código que **não é mais usado**. Parece raro, mas é mais comum do que se imagina, principalmente em sistemas grandes e antigos.
 
 **Estudo de caso: Meta/Facebook.** A empresa possui uma **ferramenta interna** que identifica código morto e gera automaticamente as mudanças (diffs) que o removem; os engenheiros responsáveis apenas revisam e aprovam. Detalhes no artigo [Automating dead code cleanup](https://engineering.fb.com/2023/10/24/data-infrastructure/automating-dead-code-cleanup/) (2023).
-
----
-
-## 5. Pontos-chave para revisão
-
-- Testes de unidade são a rede de segurança: sem eles, ninguém refatora com confiança.
-- **Oportunistas** (durante outra tarefa) são o tipo mais comum; **planejados** (sessões dedicadas) devem ser raros.
-- "Torne a mudança fácil; depois faça a mudança fácil" (Kent Beck).
-- IDEs automatizam refactorings e verificam **pré-condições**, mas muitos desenvolvedores ainda refatoram manualmente.
-- Uma mudança que altera o comportamento, mesmo que compile, **não é refactoring**.
-
----
-
-## 6. Material para estudar
-
-- [Engenharia de Software Moderna, cap. 9, seções 9.3 e 9.4](https://engsoftmoderna.info/cap9.html)
-- OUSTERHOUT, J. *A Philosophy of Software Design*. Yaknyam Press, 2018.
-- STEIMANN, F.; THIES, A. *From Public to Private to Absent: Refactoring Java Programs under Constrained Accessibility*. ECOOP, 2009.
-- [IntelliJ IDEA: Refactoring code](https://www.jetbrains.com/help/idea/refactoring-source-code.html)
 
 ---
 

@@ -14,8 +14,6 @@
 2. [Juros e principal](#2-juros-e-principal)
 3. [Exemplos de dívida técnica](#3-exemplos-de-dívida-técnica)
 4. [Dívida técnica e refactoring](#4-dívida-técnica-e-refactoring)
-5. [Pontos-chave para revisão](#5-pontos-chave-para-revisão)
-6. [Material para estudar](#6-material-para-estudar)
 
 ---
 
@@ -76,24 +74,6 @@ flowchart LR
 ```
 
 O ciclo da aula se fecha aqui: as **Leis de Lehman** mostram que a estrutura de um sistema se deteriora; os **code smells** indicam onde isso aconteceu; a **dívida técnica** explica o custo de não agir; e os **refactorings**, protegidos por **testes**, são a forma de pagar essa dívida.
-
----
-
-## 5. Pontos-chave para revisão
-
-- Dívida técnica é uma metáfora de **Ward Cunningham (1992)** para soluções de design não-ótimas.
-- **Juros** = custo extra de manutenção; **principal** = esforço para eliminar a dívida.
-- Pagar o principal compensa quando ainda haverá muitas mudanças naquela parte do sistema.
-- Falta de testes, alto acoplamento, baixa coesão e code smells são exemplos de dívida técnica.
-
----
-
-## 6. Material para estudar
-
-- [Engenharia de Software Moderna, cap. 9, seção 9.5 (Aprofundamento: Dívida Técnica)](https://engsoftmoderna.info/cap9.html)
-- VALENTE, M. T. *Manutenção de Software*. [Cap. 7: Dívida Técnica](https://manutencaosoftware.org/cap7.html)
-- CUNNINGHAM, W. *The WyCash Portfolio Management System*. OOPSLA Experience Report, 1992.
-- FOWLER, M. [Technical Debt](https://martinfowler.com/bliki/TechnicalDebt.html)
 
 ---
 

@@ -15,8 +15,6 @@
 3. [O que é refactoring?](#3-o-que-é-refactoring)
 4. [O que não é refactoring?](#4-o-que-não-é-refactoring)
 5. [Um pouco de história](#5-um-pouco-de-história)
-6. [Pontos-chave para revisão](#6-pontos-chave-para-revisão)
-7. [Material para estudar](#7-material-para-estudar)
 
 ---
 
@@ -101,24 +99,6 @@ timeline
 ```
 
 No livro de Fowler, cada refactoring do catálogo tem **nome**, **motivação**, **mecânica** (passo a passo para aplicá-lo) e **exemplos**. Esse formato é seguido na [próxima página](02-catalogo.md).
-
----
-
-## 6. Pontos-chave para revisão
-
-- Manutenção pode ser preventiva, corretiva, adaptativa, evolutiva ou de refactoring.
-- Pela segunda Lei de Lehman, sem trabalho de estabilização a estrutura do sistema se deteriora.
-- Refactoring melhora a manutenibilidade **sem mudar o comportamento externo**.
-- Novas funcionalidades, correções de bugs e otimizações de desempenho **não** são refactorings.
-- O termo surgiu com Opdyke (1992) e se popularizou com XP (1999) e com o livro de Fowler (2000).
-
----
-
-## 7. Material para estudar
-
-- [Engenharia de Software Moderna, cap. 9, seção 9.1 (Introdução)](https://engsoftmoderna.info/cap9.html)
-- LEHMAN, M. M. *Programs, life cycles, and laws of software evolution*. Proceedings of the IEEE, 1980.
-- OPDYKE, W. F. *Refactoring Object-Oriented Frameworks*. Tese de doutorado, University of Illinois, 1992.
 
 ---
 

@@ -3,13 +3,10 @@
 **Disciplina:** Engenharia de Software II
 **Professor:** Mehran Misaghi · IFC Campus Araquari
 
-> **Nesta série:** [1. Introdução](01-introducao.md) · [2. Catálogo](02-catalogo.md) · [3. Prática](03-pratica.md) · [4. Code smells](04-code-smells.md) · [5. Dívida técnica](05-divida-tecnica.md) · **Exercícios** · [Gabarito](gabarito.md)
+> **Nesta série:** [1. Introdução](01-introducao.md) · [2. Catálogo](02-catalogo.md) · [3. Prática](03-pratica.md) · [4. Code smells](04-code-smells.md) · [5. Dívida técnica](05-divida-tecnica.md) · **Exercícios** 
 
-Os exercícios 1 a 10 são adaptados dos exercícios de fixação do [Capítulo 9 do livro *Engenharia de Software Moderna*](https://engsoftmoderna.info/cap9.html).
 
 ---
-
-## Bloco A: Conceitos
 
 **1.** Qual das alternativas abaixo **não** é um benefício esperado de refactorings? Justifique.
 
@@ -26,10 +23,6 @@ Os exercícios 1 a 10 são adaptados dos exercícios de fixação do [Capítulo 
 **4.** Dê dois exemplos de pares de refactorings A e B em que **B reverte A**, ou seja, aplicar A e depois B devolve o código ao estado original.
 
 **5.** Por que testes de unidade são importantes para a prática de refactoring? O que tende a acontecer em um sistema sem testes?
-
----
-
-## Bloco B: Aplicando refactorings
 
 **6.** Aplique **Extração de Método** nos trechos abaixo, extraindo as linhas marcadas com `// extrair` para um método `g`. Indique os parâmetros e o retorno de `g`.
 
@@ -94,10 +87,6 @@ int posicao(String[] nomes, String alvo) {
 }
 ```
 
----
-
-## Bloco C: Code smells
-
 **9.** Considere a função recursiva abaixo, que calcula o n-ésimo termo da sequência de Fibonacci. **Descreva** (não precisa implementar) um clone de cada tipo (1, 2, 3 e 4) para ela.
 
 ```java
@@ -144,14 +133,5 @@ class Aluno {
 
 ---
 
-## Bloco D: Prática com IDE
 
-**12.** Em uma IDE de sua escolha (IntelliJ, Eclipse ou VS Code), reproduza o exemplo de Steimann e Thies da [página 3](03-pratica.md#verificação-de-pré-condições): crie os pacotes `P1` e `P2`, as classes `A` e `B`, e use o refactoring automatizado de **mover classe** para levar `B` de `P1` para `P2`.
-
-- (a) A IDE alertou sobre a mudança de comportamento?
-- (b) Execute o programa antes e depois. Qual método `m` é chamado em cada caso?
-- (c) Essa operação é um refactoring? Justifique.
-
----
-
-**Página anterior:** [← 5. Dívida técnica](05-divida-tecnica.md) · **Próxima:** [Gabarito →](gabarito.md)
+**Página anterior:** [← 5. Dívida técnica](05-divida-tecnica.md) ·

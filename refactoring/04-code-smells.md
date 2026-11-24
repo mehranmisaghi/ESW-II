@@ -20,8 +20,6 @@
 8. [Objetos Mutáveis](#8-objetos-mutáveis)
 9. [Classes de Dados](#9-classes-de-dados)
 10. [Comentários](#10-comentários)
-11. [Pontos-chave para revisão](#11-pontos-chave-para-revisão)
-12. [Material para estudar](#12-material-para-estudar)
 
 ---
 
@@ -370,26 +368,6 @@ Comentários são úteis para:
    // format matched kk:mm:ss EEE, MMM dd, yyy
    Pattern timePattern = Pattern.compile("\\d*:\\d*:\\d* \\w*, \\w*, \\d*, \\d*");
    ```
-
----
-
-## 11. Pontos-chave para revisão
-
-- Code smells são **indícios** de código de baixa qualidade e candidatos a refactoring, não regras absolutas.
-- **Código duplicado** é o principal smell; clones vão do tipo 1 (só espaços e comentários) ao tipo 4 (algoritmo diferente, mesma semântica).
-- **Feature Envy** se resolve movendo o método para a classe que ele "inveja".
-- Variáveis globais criam acoplamento ruim; tipos primitivos devem dar lugar a **Value Objects**.
-- Prefira **objetos imutáveis**, principalmente para conceitos simples como CEP e Data.
-- "Não comente código ruim, reescreva-o", mas documentar APIs e código complexo por natureza continua valendo.
-
----
-
-## 12. Material para estudar
-
-- [Engenharia de Software Moderna, cap. 9, seção 9.5 (Code Smells)](https://engsoftmoderna.info/cap9.html)
-- FOWLER, M. *Refactoring*, cap. 3: Bad Smells in Code (com Kent Beck).
-- YAMASHITA, A.; MOONEN, L. *Do developers care about code smells? An exploratory survey*. WCRE, 2013.
-- KERNIGHAN, B.; PLAUGER, P. J. *The Elements of Programming Style*. McGraw-Hill, 1974.
 
 ---
 

@@ -17,8 +17,6 @@
 5. [Extração de Classes e de Interfaces](#5-extração-de-classes-e-de-interfaces)
 6. [Renomeação](#6-renomeação)
 7. [Outros refactorings](#7-outros-refactorings)
-8. [Pontos-chave para revisão](#8-pontos-chave-para-revisão)
-9. [Material para estudar](#9-material-para-estudar)
 
 ---
 
@@ -334,30 +332,5 @@ Remove métodos, classes, atributos ou variáveis que não são mais usados. É 
 
 ---
 
-## 8. Pontos-chave para revisão
-
-| Refactoring | Em uma frase |
-|---|---|
-| Extração de Método | Trecho de `f` vira o método `g`; `f` chama `g` |
-| Inline de Método | Corpo de um método pequeno vai para o ponto de chamada |
-| Movimentação de Método | Método vai para a classe cujos dados ele usa |
-| Pull Up / Push Down | Movimentação para cima / para baixo na hierarquia |
-| Extração de Classe | Atributos relacionados vão para uma nova classe |
-| Extração de Interface | Interface criada a partir de classes concretas |
-| Renomeação | O mais comum: mais de 50% das operações |
-| Extração de Variável | Uma expressão complexa ganha um nome |
-| Remoção de Flags | Flags dão lugar a `return` ou `break` |
-| Condicional → Polimorfismo | `switch` sobre tipos vira método nas subclasses |
-| Remoção de Código Morto | Apaga o que não é mais usado |
-
----
-
-## 9. Material para estudar
-
-- [Engenharia de Software Moderna, cap. 9, seção 9.2 (Catálogo de Refactorings)](https://engsoftmoderna.info/cap9.html)
-- [Catálogo online de refactorings de Martin Fowler](https://refactoring.com/catalog/)
-- SILVA, D.; TSANTALIS, N.; VALENTE, M. T. *Why We Refactor? Confessions of GitHub Contributors*. FSE, 2016.
-
----
 
 **Página anterior:** [← 1. Introdução](01-introducao.md) · **Próxima página:** [3. Prática de refactoring →](03-pratica.md)
