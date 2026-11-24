@@ -58,24 +58,24 @@
 
 ## Verificação, validação e testes de software
 
-[Testes e refatoração. (12/11/2026 - 24/11 )](vvt.md)
+[Testes e refatoração. (12/11/2026 - 24/11/2026 )](vvt.md)
   - [Testes](/teste/README.md)
   - [Refatoração](/refactoring/README.md)
 
-## Visita (Ágora HUB - 17/11)
+## Visita (Ágora HUB - 17/11/2026)
+
+## Prova II (01/12/2026) (nova data)
 
 ## Aplicações da Engenharia de Software
 
-[Aplicações da Engenharia de Software (19/11/2026 - 19/11/2026)](aes.md)
+[Aplicações da Engenharia de Software - 03/12/2026)](aes.md)
   - Aplicações
   - Engenharia de Software voltado para Negócio
-
-## Prova II (01/12/2026) (nova data)
 
 ## Seminários
 
 [Seminários (03/12/2026 - 10/12/2026)](seminarios.md)
-  - Definição e detalhamento de temas (03/12/2026)
+  - Definição e detalhamento de temas (03/12)
   - Preparação de seminários (03/12)
   - Apresentação de seminários (08/12 e 10/12)
  
